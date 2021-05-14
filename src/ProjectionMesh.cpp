@@ -18,26 +18,32 @@ void ProjectionMesh::setup(float x1, float y1, float x2, float y2, float x3, flo
   fine.push_back(zero);
   fine.push_back(zero);
 
+  imageW = 1024;
+  imageH = 600;
+
   // coarseMulti = ofGetWindowWidth() / 200;
 }
 
 void ProjectionMesh::draw(ofFbo surface, bool DEBUG)
 {
+  baseW = surface.getWidth();
+  baseH = surface.getHeight();
   surface.getTexture().bind();
   glBegin(GL_TRIANGLE_STRIP);
   ofSetColor(255, 255, 0, 255);
   ofFill();
   glNormal3f(0.0f, 0.0f, 1.0f);
-  glTexCoord2f(0, 0);
+
+  glTexCoord2f(imageX, imageY);
   glVertex2f(points[0].x + fine[0].x, points[0].y + fine[0].y);
 
-  glTexCoord2f(surface.getWidth(), 0);
+  glTexCoord2f(imageW, imageY);
   glVertex2f(points[1].x + fine[1].x, points[1].y + fine[1].y);
 
-  glTexCoord2f(0, surface.getHeight());
+  glTexCoord2f(imageX, imageH);
   glVertex2f(points[3].x + fine[3].x, points[3].y + fine[3].y);
 
-  glTexCoord2f(surface.getWidth(), surface.getHeight());
+  glTexCoord2f(imageW, imageH);
   glVertex2f(points[2].x + fine[2].x, points[2].y + fine[2].y);
 
   glEnd();
@@ -106,6 +112,34 @@ void ProjectionMesh::handleOSC(ofxOscMessage msg)
   {
     float yf = msg.getArgAsFloat(0);
     fine[selectedPoint].y = yf * fineMulti;
+    // std::cout << "y point" << endl;
+  }
+
+  if (a == "/image/width")
+  {
+    float iw = msg.getArgAsFloat(0);
+    imageW = iw * baseW;
+    // std::cout << "y point" << endl;
+  }
+
+  if (a == "/image/height")
+  {
+    float ih = msg.getArgAsFloat(0);
+    imageH = ih * baseH;
+    // std::cout << "y point" << endl;
+  }
+
+  if (a == "/image/x")
+  {
+    float ix = msg.getArgAsFloat(0);
+    imageX = ix * baseW;
+    // std::cout << "y point" << endl;
+  }
+
+  if (a == "/image/y")
+  {
+    float iy = msg.getArgAsFloat(0);
+    imageY = iy * baseH;
     // std::cout << "y point" << endl;
   }
 }

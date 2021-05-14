@@ -49,8 +49,13 @@ void Presets::saveSettings()
         settings.addValue("index", j);
         settings.addValue("x", p.currentMeshes[i].points[j].x + p.currentMeshes[i].fine[j].x);
         settings.addValue("y", p.currentMeshes[i].points[j].y + p.currentMeshes[i].fine[j].y);
+
         settings.popTag();
       }
+      settings.addValue("imgX", p.currentMeshes[i].imageX);
+      settings.addValue("imgY", p.currentMeshes[i].imageY);
+      settings.addValue("imgW", p.currentMeshes[i].imageW);
+      settings.addValue("imgH", p.currentMeshes[i].imageH);
       settings.popTag();
     }
     settings.popTag();
@@ -110,6 +115,11 @@ void Presets::loadSettings()
           m.fine.push_back(ofPoint(0, 0));
           settings.popTag();
         }
+        m.imageX = settings.getValue("imgX", 0);
+        m.imageY = settings.getValue("imgY", 0);
+        m.imageW = settings.getValue("imgW", 0);
+        m.imageH = settings.getValue("imgH", 0);
+
         std::cout << "pushing back meshes" << endl;
         meshes.push_back(m);
         settings.popTag();

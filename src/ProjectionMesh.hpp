@@ -29,6 +29,13 @@ public:
   vector<ofPoint> points;
   vector<ofPoint> fine;
 
+  int imageW = 1;
+  int imageH = 1;
+  int baseW = 1024;
+  int baseH = 630;
+  int imageX = 0;
+  int imageY = 0;
+
   int selectedPoint = 0;
   float coarseMulti = 20;
   float fineMulti = 1;
