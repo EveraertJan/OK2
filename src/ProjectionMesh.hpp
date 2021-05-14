@@ -30,7 +30,7 @@ public:
   vector<ofPoint> fine;
 
   int selectedPoint = 0;
-  float coarseMulti = 10;
+  float coarseMulti = 20;
   float fineMulti = 1;
 };
 

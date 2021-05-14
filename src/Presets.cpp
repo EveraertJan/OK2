@@ -1,7 +1,8 @@
 #include "./Presets.hpp"
 
-void Presets::setup()
+void Presets::setup(ofxOscSender s)
 {
+  sender = s;
   // setup cur presets and load all
   loadSettings();
 
@@ -57,7 +58,24 @@ void Presets::saveSettings()
   settings.popTag();
   settings.saveFile("presets.xml");
 }
+void Presets::createNew()
+{
+  std::cout << "no file, creating new" << endl;
+  vector<ProjectionMesh> meshes;
+  ProjectionMesh m;
+  m.setup(
+      100, 100,
+      ofGetWidth() - 100, 100,
+      ofGetWidth() - 100, ofGetHeight() - 100,
+      100, ofGetHeight() - 100);
 
+  meshes.push_back(m);
+
+  Preset p;
+
+  p.setup(meshes);
+  presets.push_back(p);
+}
 void Presets::loadSettings()
 {
   ofxXmlSettings settings;
@@ -109,20 +127,7 @@ void Presets::loadSettings()
   else
   {
     std::cout << "no file, creating new" << endl;
-    vector<ProjectionMesh> meshes;
-    ProjectionMesh m;
-    m.setup(
-        100, 100,
-        ofGetWidth() - 100, 100,
-        ofGetWidth() - 100, ofGetHeight() - 100,
-        100, ofGetHeight() - 100);
-
-    meshes.push_back(m);
-
-    Preset p;
-
-    p.setup(meshes);
-    presets.push_back(p);
+    createNew();
     currentPreset = 0;
   }
 }
@@ -142,14 +147,59 @@ void Presets::handleOSC(ofxOscMessage msg)
     std::cout << "resetting" << endl;
   }
 
-  presets[currentPreset].handleOSC(msg);
+  if (a == "/presets/next")
+  {
+    nextPreset();
+    std::cout << "next" << endl;
+  }
 
-  // if (a == "/keystoneV")
-  // {
-  //   keyStoneV = msg.getArgAsFloat(0);
-  // }
-  // if (a == "/keystoneH")
-  // {
-  //   keyStoneH = msg.getArgAsFloat(0);
-  // }
+  if (a == "/preset/previous")
+  {
+    prevPreset();
+    std::cout << "prev" << endl;
+  }
+
+  if (a == "/presets/create")
+  {
+    std::cout << "creating" << endl;
+    createNew();
+    currentPreset = presets.size() - 1;
+  }
+
+  if (a == "/presets/delete")
+  {
+    std::cout << "creating" << endl;
+    presets.erase(presets.begin() + currentPreset);
+
+    currentPreset = presets.size() - 1;
+  }
+
+  presets[currentPreset].handleOSC(msg);
+}
+
+void Presets::nextPreset()
+{
+  sendMessage("/presets/label", currentPreset);
+  currentPreset++;
+  if (currentPreset >= presets.size())
+  {
+    currentPreset = 0;
+  }
+}
+void Presets::prevPreset()
+{
+  sendMessage("/presets/label", currentPreset);
+  currentPreset--;
+  if (currentPreset < 0)
+  {
+    currentPreset = presets.size() - 1;
+  }
+}
+
+void Presets::sendMessage(string channel, int value)
+{
+  ofxOscMessage msg;
+  msg.setAddress(channel);
+  msg.addFloatArg(value);
+  sender.sendMessage(msg);
 }

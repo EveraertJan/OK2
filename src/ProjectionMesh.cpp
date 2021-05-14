@@ -17,6 +17,8 @@ void ProjectionMesh::setup(float x1, float y1, float x2, float y2, float x3, flo
   fine.push_back(zero);
   fine.push_back(zero);
   fine.push_back(zero);
+
+  // coarseMulti = ofGetWindowWidth() / 200;
 }
 
 void ProjectionMesh::draw(ofFbo surface, bool DEBUG)
@@ -96,7 +98,7 @@ void ProjectionMesh::handleOSC(ofxOscMessage msg)
   if (a == "/surface/point/y/coarse")
   {
     float yc = msg.getArgAsFloat(0);
-    points[selectedPoint].y = yc * coarseMulti;
+    points[selectedPoint].y = yc * (coarseMulti * 0.6);
     // std::cout << "y point" << endl;
   }
 

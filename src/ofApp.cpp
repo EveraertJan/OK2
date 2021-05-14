@@ -11,7 +11,7 @@ void ofApp::setup()
 
   surfaceGenerator = new SurfaceGenerator();
 
-  presets.setup();
+  presets.setup(sender);
 }
 
 //--------------------------------------------------------------
@@ -54,9 +54,11 @@ void ofApp::keyPressed(int key)
     // DISPLAY_MODE = 0;
     break;
   case '1':
+    presets.prevPreset();
     // DISPLAY_MODE = 1;
     break;
   case '2':
+    presets.nextPreset();
     // DISPLAY_MODE = 2;
     break;
   case '3':

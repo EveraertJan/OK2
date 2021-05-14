@@ -21,16 +21,23 @@ class Presets
 {
 
 public:
-  void setup();
+  void setup(ofxOscSender s);
 
   void update();
 
   void draw(ofFbo surface);
 
   void handleOSC(ofxOscMessage msg);
-
+  void createNew();
   void saveSettings();
   void loadSettings();
+
+  void prevPreset();
+  void nextPreset();
+
+  void sendMessage(string channel, int value);
+
+  ofxOscSender sender;
 
   int currentPreset;
   vector<Preset> presets;
