@@ -1,0 +1,26 @@
+<presets>
+    <preset>
+        <mesh>
+            <point>
+                <index>0</index>
+                <x>-2.923965454</x>
+                <y>100.000000000</y>
+            </point>
+            <point>
+                <index>1</index>
+                <x>924.000000000</x>
+                <y>100.000000000</y>
+            </point>
+            <point>
+                <index>2</index>
+                <x>924.000000000</x>
+                <y>668.000000000</y>
+            </point>
+            <point>
+                <index>3</index>
+                <x>100.000000000</x>
+                <y>668.000000000</y>
+            </point>
+        </mesh>
+    </preset>
+</presets>

@@ -3,7 +3,7 @@
 #include "ofMain.h"
 #include "SurfaceGenerator.hpp"
 #include "ofxOsc.h"
-#include "Preset.hpp"
+#include "Presets.hpp"
 
 class ofApp : public ofBaseApp
 {
@@ -30,5 +30,5 @@ public:
 
 	SurfaceGenerator *surfaceGenerator;
 
-	Preset preset;
+	Presets presets;
 };

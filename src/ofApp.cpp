@@ -11,21 +11,21 @@ void ofApp::setup()
 
   surfaceGenerator = new SurfaceGenerator();
 
-  preset.setup();
+  presets.setup();
 }
 
 //--------------------------------------------------------------
 void ofApp::update()
 {
   surfaceGenerator->update();
-  preset.update();
+  presets.update();
   while (receiver.hasWaitingMessages())
   {
     ofxOscMessage msg;
     receiver.getNextMessage(&msg);
     // std::cout << msg << endl;
 
-    preset.handleOSC(msg);
+    presets.handleOSC(msg);
   }
 }
 
@@ -37,7 +37,7 @@ void ofApp::draw()
   ofClear(0, 0, 0);
   // surfaceGenerator->draw(400, 600, 0, 0, 0, 400, 600, false, false);
 
-  preset.draw(surfaceGenerator->wall_FBO);
+  presets.draw(surfaceGenerator->wall_FBO);
   // presets.draw(surfaceGenerator, DISPLAY_INTERACTION, DISPLAY_LOUIS);
 }
 

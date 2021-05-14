@@ -1,14 +1,15 @@
 #include "./Preset.hpp"
 
-void Preset::setup()
+void Preset::setup(vector<ProjectionMesh> meshes)
 {
-  ProjectionMesh m;
-  m.setup(
-      100, 100,
-      ofGetWidth() - 100, 100,
-      ofGetWidth() - 100, ofGetHeight() - 100,
-      100, ofGetHeight() - 100);
-  currentMeshes.push_back(m);
+  // ProjectionMesh m;
+  // m.setup(
+  //     100, 100,
+  //     ofGetWidth() - 100, 100,
+  //     ofGetWidth() - 100, ofGetHeight() - 100,
+  //     100, ofGetHeight() - 100);
+
+  currentMeshes = meshes;
 }
 
 void Preset::update()
@@ -32,31 +33,10 @@ void Preset::draw(ofFbo surface)
     }
   }
 }
-void Preset::saveSettings()
-{
-  ofxXmlSettings settings;
-
-  settings.addTag("presets");
-  settings.pushTag("presets");
-}
-
-void Preset::loadSettings()
-{
-}
 void Preset::handleOSC(ofxOscMessage msg)
 {
   string a = msg.getAddress();
   // std::cout << a << endl;
-
-  if (a == "/preset/save")
-  {
-    std::cout << "saving" << endl;
-  }
-
-  if (a == "/preset/reset")
-  {
-    std::cout << "resetting" << endl;
-  }
 
   if (a == "/preset/mesh/add")
   {

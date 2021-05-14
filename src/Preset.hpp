@@ -21,13 +21,10 @@ class Preset
 {
 
 public:
-  void setup();
+  void setup(vector<ProjectionMesh> meshes);
   void update();
   void draw(ofFbo surface);
   void handleOSC(ofxOscMessage msg);
-
-  void saveSettings();
-  void loadSettings();
 
   vector<ProjectionMesh> currentMeshes;
 
