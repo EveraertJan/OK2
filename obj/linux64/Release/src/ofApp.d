@@ -540,6 +540,7 @@ obj/linux64/Release/src/ofApp.o: \
  /home/jan/Documents/openframeworks/addons/ofxOsc/libs/oscpack/src/osc/OscPacketListener.h \
  /home/jan/Documents/openframeworks/addons/ofxOsc/libs/oscpack/src/osc/OscReceivedElements.h \
  /home/jan/Documents/openframeworks/addons/ofxOsc/libs/oscpack/src/osc/../ip/PacketListener.h \
+ /home/jan/Documents/openframeworks/addons/ofxGif/src/ofxGif.h \
  /home/jan/Documents/openframeworks/apps/myApps/OK_v2/src/settings.hpp \
  /home/jan/Documents/openframeworks/apps/myApps/OK_v2/src/Presets.hpp \
  /home/jan/Documents/openframeworks/apps/myApps/OK_v2/src/Preset.hpp \
@@ -1658,6 +1659,8 @@ obj/linux64/Release/src/ofApp.o: \
 /home/jan/Documents/openframeworks/addons/ofxOsc/libs/oscpack/src/osc/OscReceivedElements.h:
 
 /home/jan/Documents/openframeworks/addons/ofxOsc/libs/oscpack/src/osc/../ip/PacketListener.h:
+
+/home/jan/Documents/openframeworks/addons/ofxGif/src/ofxGif.h:
 
 /home/jan/Documents/openframeworks/apps/myApps/OK_v2/src/settings.hpp:
 

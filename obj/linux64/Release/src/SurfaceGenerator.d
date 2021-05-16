@@ -539,6 +539,7 @@ obj/linux64/Release/src/SurfaceGenerator.o: \
  /home/jan/Documents/openframeworks/addons/ofxOsc/libs/oscpack/src/osc/OscPacketListener.h \
  /home/jan/Documents/openframeworks/addons/ofxOsc/libs/oscpack/src/osc/OscReceivedElements.h \
  /home/jan/Documents/openframeworks/addons/ofxOsc/libs/oscpack/src/osc/../ip/PacketListener.h \
+ /home/jan/Documents/openframeworks/addons/ofxGif/src/ofxGif.h \
  /home/jan/Documents/openframeworks/apps/myApps/OK_v2/src/settings.hpp
 
 /home/jan/Documents/openframeworks/apps/myApps/OK_v2/src/SurfaceGenerator.hpp:
@@ -1652,5 +1653,7 @@ obj/linux64/Release/src/SurfaceGenerator.o: \
 /home/jan/Documents/openframeworks/addons/ofxOsc/libs/oscpack/src/osc/OscReceivedElements.h:
 
 /home/jan/Documents/openframeworks/addons/ofxOsc/libs/oscpack/src/osc/../ip/PacketListener.h:
+
+/home/jan/Documents/openframeworks/addons/ofxGif/src/ofxGif.h:
 
 /home/jan/Documents/openframeworks/apps/myApps/OK_v2/src/settings.hpp:

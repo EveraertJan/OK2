@@ -12,6 +12,7 @@
 #include "ofMain.h"
 #include "ofxXmlSettings.h"
 #include "ofxOsc.h"
+#include "ofxGif.h"
 
 #include "settings.hpp"
 
@@ -21,6 +22,7 @@ class SurfaceGenerator
 public:
 	SurfaceGenerator();
 	void update();
+	void generate();
 	void draw(int drawWidth, int drawHeight, int position, int subX, int subY, int subWidth, int subHeight, bool INTERACTION, bool LOUIS);
 	void loadNewSource(std::string source);
 	void handleOSC(ofxOscMessage msg);
@@ -30,11 +32,17 @@ public:
 	ofFbo wall_FBO;
 	ofFbo ceiling_FBO;
 
-	ofImage back;
-	ofImage mid;
-	ofImage top;
+	// ofImage back;
+	// ofImage mid;
+	// ofImage top;
 
-		int HEIGHT = _height;
+	ofxGIF::fiGifLoader back;
+	ofxGIF::fiGifLoader mid;
+
+	int indexBack = 0;
+	int indexMid = 0;
+
+	int HEIGHT = _height;
 	int WIDTH = _width;
 };
 

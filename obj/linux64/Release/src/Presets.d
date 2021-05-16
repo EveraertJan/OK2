@@ -541,6 +541,7 @@ obj/linux64/Release/src/Presets.o: \
  /home/jan/Documents/openframeworks/addons/ofxOsc/libs/oscpack/src/osc/../ip/PacketListener.h \
  /home/jan/Documents/openframeworks/apps/myApps/OK_v2/src/./Preset.hpp \
  /home/jan/Documents/openframeworks/apps/myApps/OK_v2/src/./SurfaceGenerator.hpp \
+ /home/jan/Documents/openframeworks/addons/ofxGif/src/ofxGif.h \
  /home/jan/Documents/openframeworks/apps/myApps/OK_v2/src/./settings.hpp \
  /home/jan/Documents/openframeworks/apps/myApps/OK_v2/src/./ProjectionMesh.hpp
 
@@ -1659,6 +1660,8 @@ obj/linux64/Release/src/Presets.o: \
 /home/jan/Documents/openframeworks/apps/myApps/OK_v2/src/./Preset.hpp:
 
 /home/jan/Documents/openframeworks/apps/myApps/OK_v2/src/./SurfaceGenerator.hpp:
+
+/home/jan/Documents/openframeworks/addons/ofxGif/src/ofxGif.h:
 
 /home/jan/Documents/openframeworks/apps/myApps/OK_v2/src/./settings.hpp:
 

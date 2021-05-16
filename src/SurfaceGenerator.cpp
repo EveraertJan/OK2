@@ -28,73 +28,42 @@ SurfaceGenerator::SurfaceGenerator()
 void SurfaceGenerator::handleOSC(ofxOscMessage msg)
 {
   string a = msg.getAddress();
-  // if (a == "/keystoneV")
-  // {
-  //   keyStoneV = msg.getArgAsFloat(0);
-  // }
-  // if (a == "/keystoneH")
-  // {
-  //   keyStoneH = msg.getArgAsFloat(0);
-  // }
 }
 
 void SurfaceGenerator::update()
 {
 
-  // wall_background.update();
-  // wall_foreground.update();
-  // wall_interaction.update();
+  if (ofGetElapsedTimeMillis() % 2)
+  {
+    indexBack++;
+    if (indexBack > back.pages.size() - 1)
+      indexBack = 0;
 
-  // ceiling_background.update();
-  // ceiling_foreground.update();
-  // ceiling_interaction.update();
-
+    indexMid++;
+    if (indexMid > mid.pages.size() - 1)
+      indexMid = 0;
+  }
+}
+void SurfaceGenerator::generate()
+{
   // // prep walls
   wall_FBO.begin();
   ofEnableAlphaBlending();
   ofClear(0, 0, 0, 0);
-  // wall_background.draw(0, HEIGHT, WIDTH, -HEIGHT);
-  // wall_interaction.draw(0, HEIGHT, WIDTH, -HEIGHT);
-  // wall_foreground.draw(0, HEIGHT, WIDTH, -HEIGHT);
-  // if (louis_bottom.isPlaying())
-  // {
-  //   louis_bottom.draw(0, HEIGHT, WIDTH, -HEIGHT);
-  // }
-  // if (louis_left.isPlaying())
-  // {
-  //   louis_left.draw(0, HEIGHT, WIDTH, -HEIGHT);
-  // }
-  // if (louis_top.isPlaying())
-  // {
-  //   louis_top.draw(0, HEIGHT, WIDTH, -HEIGHT);
-  // }
-  back.draw(0, 0, WIDTH, HEIGHT);
+
+  ofSetColor(255, 255, 255, 255);
+  // ofImage backImg = back.pages[indexBack];
+  // ofPixels bp = backImg.getPixels();
+  // backImg.setFromPixels(bp);
+  // backImg.draw(0, 0, WIDTH, HEIGHT);
+
+  ofImage midImg = mid.pages[indexMid];
+  ofPixels mp = midImg.getPixels();
+  midImg.setFromPixels(mp);
+  midImg.draw(0, 0, 200, 200);
 
   ofDisableAlphaBlending();
   wall_FBO.end();
-
-  // // prep ceiling
-  ceiling_FBO.begin();
-  ofEnableAlphaBlending();
-  ofClear(0, 0, 0, 0);
-  back.draw(0, 0, WIDTH, HEIGHT);
-  // ceiling_background.draw(0, 0, WIDTH, HEIGHT);
-  // ceiling_foreground.draw(0, 0, WIDTH, HEIGHT);
-  // ceiling_interaction.draw(0, 0, WIDTH, HEIGHT);
-  // if (louis_bottom.isPlaying())
-  // {
-  //   louis_bottom.draw(0, 0, WIDTH, HEIGHT);
-  // }
-  // if (louis_left.isPlaying())
-  // {
-  //   louis_left.draw(0, 0, WIDTH, HEIGHT);
-  // }
-  // if (louis_top.isPlaying())
-  // {
-  //   louis_top.draw(0, 0, WIDTH, HEIGHT);
-  // }
-  ofDisableAlphaBlending();
-  ceiling_FBO.end();
 }
 
 void SurfaceGenerator::draw(int drawWidth, int drawHeight, int position, int subX, int subY, int subWidth, int subHeight, bool INTERACTION, bool LOUIS)
@@ -151,36 +120,6 @@ void SurfaceGenerator::draw(int drawWidth, int drawHeight, int position, int sub
 void SurfaceGenerator::loadNewSource(std::string source)
 {
 
-  back.load("jungle/back.png");
-  mid.load("jungle/back.png");
-  top.load("jungle/back.png");
-
-  // wall_background.load(source + "/wall_background.mov");
-  // wall_background.play();
-  // wall_foreground.load(source + "/wall_foreground.mov");
-  // wall_foreground.play();
-  // wall_interaction.load(source + "/wall_interaction.mov");
-  // wall_interaction.play();
-  // wall_interaction.setLoopState(OF_LOOP_NONE);
-
-  // ceiling_background.load(source + "/ceiling_background.mov");
-  // ceiling_background.play();
-  // ceiling_foreground.load(source + "/ceiling_foreground.mov");
-  // ceiling_foreground.play();
-  // ceiling_interaction.load(source + "/ceiling_interaction.mov");
-  // ceiling_interaction.play();
-  // ceiling_interaction.setLoopState(OF_LOOP_NONE);
-
-  // louis_top.load("louis/top.mov");
-  // louis_top.setLoopState(OF_LOOP_NONE);
-  // louis_bottom.load("louis/bottom.mov");
-  // louis_bottom.setLoopState(OF_LOOP_NONE);
-  // louis_left.load("louis/left.mov");
-  // louis_left.setLoopState(OF_LOOP_NONE);
-
-  // interactionSound.load(source + "/interaction.mp3");
-  // if (interactionSound.isLoaded())
-  // {
-  // 	interactionSound.setLoop(false);
-  // }
+  back.load("space/back.gif");
+  mid.load("space/mid.gif");
 }

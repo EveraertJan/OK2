@@ -34,6 +34,8 @@ void ofApp::draw()
 {
   // draw whatever
 
+  surfaceGenerator->generate();
+
   ofClear(0, 0, 0);
   // surfaceGenerator->draw(400, 600, 0, 0, 0, 400, 600, false, false);
 
