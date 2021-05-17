@@ -31,4 +31,7 @@ public:
 	SurfaceGenerator *surfaceGenerator;
 
 	Presets presets;
+    
+    bool DISPLAY_MASCOTTE = false;
+    bool DEBUG_MODE = false;
 };

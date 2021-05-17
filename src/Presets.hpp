@@ -25,7 +25,7 @@ public:
 
   void update();
 
-  void draw(ofFbo surface);
+  void draw(ofFbo surface, bool DEBUG);
 
   void handleOSC(ofxOscMessage msg);
   void createNew();

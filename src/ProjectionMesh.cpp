@@ -30,10 +30,8 @@ void ProjectionMesh::draw(ofFbo surface, bool DEBUG)
   baseH = surface.getHeight();
   surface.getTexture().bind();
   glBegin(GL_TRIANGLE_STRIP);
-  ofSetColor(255, 255, 0, 255);
   ofFill();
   glNormal3f(0.0f, 0.0f, 1.0f);
-
   glTexCoord2f(imageX, imageY);
   glVertex2f(points[0].x + fine[0].x, points[0].y + fine[0].y);
 
@@ -49,8 +47,10 @@ void ProjectionMesh::draw(ofFbo surface, bool DEBUG)
   glEnd();
   surface.getTextureReference().unbind();
   ofFill();
+    ofSetColor(255, 255, 0, 255);
   if (DEBUG)
   {
+
     for (int i = 0; i < points.size(); i++)
     {
       ofNoFill();
@@ -61,6 +61,7 @@ void ProjectionMesh::draw(ofFbo surface, bool DEBUG)
       ofDrawRectangle((points[i].x + fine[i].x) - 5, (points[i].y + fine[i].y) - 5, 10, 10);
     }
   }
+    ofSetColor(255, 255, 255, 255);
   ofFill();
 }
 

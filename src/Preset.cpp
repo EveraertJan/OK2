@@ -16,7 +16,7 @@ void Preset::update()
 {
 }
 
-void Preset::draw(ofFbo surface)
+void Preset::draw(ofFbo surface, bool DEBUG)
 {
   if (currentMeshes.size() > 0)
   {

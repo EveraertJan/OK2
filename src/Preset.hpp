@@ -23,14 +23,13 @@ class Preset
 public:
   void setup(vector<ProjectionMesh> meshes);
   void update();
-  void draw(ofFbo surface);
+  void draw(ofFbo surface, bool DEBUG);
   void handleOSC(ofxOscMessage msg);
 
   vector<ProjectionMesh> currentMeshes;
 
   int curMesh = 0;
 
-  bool DEBUG = true;
 };
 
 #endif /* SurfaceClass_hpp */

@@ -22,28 +22,34 @@ class SurfaceGenerator
 public:
 	SurfaceGenerator();
 	void update();
-	void generate();
+	void generate(bool DEBUG);
 	void draw(int drawWidth, int drawHeight, int position, int subX, int subY, int subWidth, int subHeight, bool INTERACTION, bool LOUIS);
-	void loadNewSource(std::string source);
+	void loadNewSource();
 	void handleOSC(ofxOscMessage msg);
+    
+    void nextSource();
+    void prevSource();
 
 	ofSoundPlayer interactionSound;
 
 	ofFbo wall_FBO;
 	ofFbo ceiling_FBO;
 
-	// ofImage back;
-	// ofImage mid;
-	// ofImage top;
+	 ofImage back;
+	 ofImage mid;
+	 ofImage top;
 
-	ofxGIF::fiGifLoader back;
-	ofxGIF::fiGifLoader mid;
+//	ofxGIF::fiGifLoader back;
+//	ofxGIF::fiGifLoader mid;
 
 	int indexBack = 0;
 	int indexMid = 0;
 
 	int HEIGHT = _height;
 	int WIDTH = _width;
+
+    vector<std::string> envSources;
+    int curSource = 0;
 };
 
 #endif /* SurfaceClass_hpp */

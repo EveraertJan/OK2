@@ -34,12 +34,10 @@ void ofApp::draw()
 {
   // draw whatever
 
-  surfaceGenerator->generate();
+  surfaceGenerator->generate(DEBUG_MODE);
 
   ofClear(0, 0, 0);
-  // surfaceGenerator->draw(400, 600, 0, 0, 0, 400, 600, false, false);
-
-  presets.draw(surfaceGenerator->wall_FBO);
+  presets.draw(surfaceGenerator->wall_FBO, DEBUG_MODE);
   // presets.draw(surfaceGenerator, DISPLAY_INTERACTION, DISPLAY_LOUIS);
 }
 
@@ -48,27 +46,21 @@ void ofApp::keyPressed(int key)
 {
   switch (key)
   {
-  case 't':
-  case '6':
-    // aruco.TRACK = !aruco.TRACK;
-    break;
   case '0':
-    // DISPLAY_MODE = 0;
+    presets.currentPreset = 0;
     break;
   case '1':
     presets.prevPreset();
-    // DISPLAY_MODE = 1;
     break;
   case '2':
     presets.nextPreset();
-    // DISPLAY_MODE = 2;
     break;
   case '3':
     // DISPLAY_MODE = 3;
     break;
   case '4':
   case 'l':
-    // DISPLAY_LOUIS = true;
+    DISPLAY_MASCOTTE = true;
     break;
   case '5':
   case 'i':
@@ -76,7 +68,7 @@ void ofApp::keyPressed(int key)
     break;
   case '7':
   case 'v':
-    // DEBUG_MODE = !DEBUG_MODE;
+    DEBUG_MODE = !DEBUG_MODE;
     break;
   case '8':
   case 'c':
@@ -96,11 +88,11 @@ void ofApp::keyPressed(int key)
     break;
   case '+':
   case 'w':
-    // surfaceGenerator->loadNewSource("water");
+     surfaceGenerator->nextSource();
     break;
   case '-':
   case 's':
-    // surfaceGenerator->loadNewSource("space");
+     surfaceGenerator->prevSource();
     break;
   case '.':
     // if (sound.isPlaying())
@@ -122,10 +114,6 @@ void ofApp::keyReleased(int key)
 {
   switch (key)
   {
-  case 't':
-  case '6':
-    // aruco.TRACK = false;
-    break;
   case 'i':
   case '5':
     // DISPLAY_INTERACTION = false;

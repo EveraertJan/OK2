@@ -1,4 +1,4 @@
-ofxXmlSettings
-ofxOsc
-ofxGui
 ofxGif
+ofxGui
+ofxOsc
+ofxXmlSettings

@@ -11,7 +11,11 @@ SurfaceGenerator::SurfaceGenerator()
 {
   ofEnableAlphaBlending();
 
-  loadNewSource("water");
+    envSources.push_back("water");
+    envSources.push_back("space");
+    
+    loadNewSource();
+      
 
   wall_FBO.allocate(WIDTH, HEIGHT, GL_RGBA);
   ceiling_FBO.allocate(WIDTH, HEIGHT, GL_RGBA);
@@ -33,18 +37,18 @@ void SurfaceGenerator::handleOSC(ofxOscMessage msg)
 void SurfaceGenerator::update()
 {
 
-  if (ofGetElapsedTimeMillis() % 2)
-  {
-    indexBack++;
-    if (indexBack > back.pages.size() - 1)
-      indexBack = 0;
-
-    indexMid++;
-    if (indexMid > mid.pages.size() - 1)
-      indexMid = 0;
-  }
+//  if (ofGetElapsedTimeMillis() % 2)
+//  {
+//    indexBack++;
+//    if (indexBack > back.pages.size() - 1)
+//      indexBack = 0;
+//
+//    indexMid++;
+//    if (indexMid > mid.pages.size() - 1)
+//      indexMid = 0;
+//  }
 }
-void SurfaceGenerator::generate()
+void SurfaceGenerator::generate( bool DEBUG)
 {
   // // prep walls
   wall_FBO.begin();
@@ -52,16 +56,14 @@ void SurfaceGenerator::generate()
   ofClear(0, 0, 0, 0);
 
   ofSetColor(255, 255, 255, 255);
-  // ofImage backImg = back.pages[indexBack];
-  // ofPixels bp = backImg.getPixels();
-  // backImg.setFromPixels(bp);
-  // backImg.draw(0, 0, WIDTH, HEIGHT);
+    
+   ofImage backImg = back;
+   ofPixels bp = backImg.getPixels();
+   backImg.setFromPixels(bp);
+   backImg.draw(0, 0, WIDTH, HEIGHT);
 
-  ofImage midImg = mid.pages[indexMid];
-  ofPixels mp = midImg.getPixels();
-  midImg.setFromPixels(mp);
-  midImg.draw(0, 0, 200, 200);
-
+//  back.draw(0, 0, WIDTH, HEIGHT);
+    mid.draw(0, 0, WIDTH, HEIGHT);
   ofDisableAlphaBlending();
   wall_FBO.end();
 }
@@ -117,9 +119,28 @@ void SurfaceGenerator::draw(int drawWidth, int drawHeight, int position, int sub
   }
 }
 
-void SurfaceGenerator::loadNewSource(std::string source)
+void SurfaceGenerator::loadNewSource()
 {
+    std::string pre = envSources[curSource];
+  back.load(pre+"/background.png");
+  mid.load(pre+"/mid.png");
+    
+//    midImage
+}
 
-  back.load("space/back.gif");
-  mid.load("space/mid.gif");
+void SurfaceGenerator::nextSource() {
+    curSource++;
+    if(curSource >= envSources.size()){
+        curSource = 0;
+    }
+    loadNewSource();
+}
+
+
+void SurfaceGenerator::prevSource() {
+    curSource--;
+    if(curSource < 0) {
+        curSource = envSources.size() -1;
+    }
+    loadNewSource();
 }
