@@ -10,20 +10,20 @@
 SurfaceGenerator::SurfaceGenerator()
 {
   ofEnableAlphaBlending();
-
-    envSources.push_back("water");
-    envSources.push_back("space");
-    
-    loadNewSource();
-      
-
+  
+  envSources.push_back("water");
+  envSources.push_back("space");
+  
+  loadNewSource();
+  
+  
   wall_FBO.allocate(WIDTH, HEIGHT, GL_RGBA);
   ceiling_FBO.allocate(WIDTH, HEIGHT, GL_RGBA);
-
+  
   wall_FBO.begin();
   ofClear(0, 0, 0, 0);
   wall_FBO.end();
-
+  
   ceiling_FBO.begin();
   ofClear(0, 0, 0, 0);
   ceiling_FBO.end();
@@ -34,19 +34,22 @@ void SurfaceGenerator::handleOSC(ofxOscMessage msg)
   string a = msg.getAddress();
 }
 
-void SurfaceGenerator::update()
+void SurfaceGenerator::update(bool INTERACTION)
 {
-
-//  if (ofGetElapsedTimeMillis() % 2)
-//  {
-//    indexBack++;
-//    if (indexBack > back.pages.size() - 1)
-//      indexBack = 0;
-//
-//    indexMid++;
-//    if (indexMid > mid.pages.size() - 1)
-//      indexMid = 0;
-//  }
+  if(backVid.isLoaded()) {
+    backVid.update();
+  }
+  if( midVid.isLoaded() ) {
+    midVid.update();
+  }
+  if( interactionVid.isLoaded()) {
+    interactionVid.update();
+  }
+  
+  
+  if(INTERACTION && !interactionVid.isPlaying()) {
+    interactionVid.play();
+  }
 }
 void SurfaceGenerator::generate( bool DEBUG)
 {
@@ -54,93 +57,72 @@ void SurfaceGenerator::generate( bool DEBUG)
   wall_FBO.begin();
   ofEnableAlphaBlending();
   ofClear(0, 0, 0, 0);
-
+  
   ofSetColor(255, 255, 255, 255);
-    
-   ofImage backImg = back;
-   ofPixels bp = backImg.getPixels();
-   backImg.setFromPixels(bp);
-   backImg.draw(0, 0, WIDTH, HEIGHT);
-
-//  back.draw(0, 0, WIDTH, HEIGHT);
-    mid.draw(0, 0, WIDTH, HEIGHT);
+  if(backVid.isLoaded()) {
+    backVid.draw(0, 0, WIDTH, HEIGHT);
+  }
+  if( interactionVid.isLoaded()) {
+    interactionVid.draw(0, 0, WIDTH, HEIGHT);
+  }
+  if( midVid.isLoaded()) {
+    midVid.draw(0, 0, WIDTH, HEIGHT);
+  }
+  
   ofDisableAlphaBlending();
   wall_FBO.end();
 }
 
 void SurfaceGenerator::draw(int drawWidth, int drawHeight, int position, int subX, int subY, int subWidth, int subHeight, bool INTERACTION, bool LOUIS)
 {
-  // back.draw(0, 0);
-  //   if (INTERACTION)
-  //   {
-  //     if (!wall_interaction.isPlaying())
-  //     {
-  //       wall_interaction.play();
-  //     }
-
-  //     if (!ceiling_interaction.isPlaying())
-  //     {
-  //       ceiling_interaction.play();
-  //     }
-  //     if (interactionSound.isLoaded())
-  //     {
-  //       interactionSound.play();
-  //     }
-  //   }
-
-  //   if (LOUIS)
-  //   {
-  //     int select = floor((ofGetFrameNum() / 24 / 2) % 3);
-
-  //     if (select == 0)
-  //     {
-  //       louis_bottom.play();
-  //     }
-  //     if (select == 1)
-  //     {
-  //       louis_top.play();
-  //     }
-  //     if (select == 2)
-  //     {
-  //       louis_left.play();
-  //     }
-  //   }
-
-  // this is a problematic thing
-  if (position == 0)
-  {
-    wall_FBO.getTexture().drawSubsection(0, 0, drawWidth, drawHeight, subX, subY, subWidth, subHeight);
-  }
-
-  else
-  {
-
-    ceiling_FBO.getTexture().drawSubsection(0, 0, drawWidth, drawHeight, subX, subY, subWidth, subHeight);
-  }
 }
 
 void SurfaceGenerator::loadNewSource()
 {
-    std::string pre = envSources[curSource];
-  back.load(pre+"/background.png");
-  mid.load(pre+"/mid.png");
-    
-//    midImage
+  backVid.stop();
+  midVid.stop();
+  interactionVid.stop();
+  
+  backVid.close();
+  midVid.close();
+  interactionVid.close();
+  
+  std::string pre = envSources[curSource];
+  
+  std::cout << pre << endl;
+  
+  backVid.load("video/"+pre+"/background.mp4");
+  if(pre != "space") {
+    midVid.load("video/"+pre+"/mid.mov");
+  }
+  
+  interactionVid.load("video/"+pre+"/interaction.mov");
+  
+  
+  backVid.play();
+  midVid.play();
+  interactionVid.play();
+  interactionVid.setLoopState(OF_LOOP_NONE);
 }
 
 void SurfaceGenerator::nextSource() {
-    curSource++;
-    if(curSource >= envSources.size()){
-        curSource = 0;
-    }
-    loadNewSource();
+  curSource++;
+  if(curSource > envSources.size()-1){
+    curSource = 0;
+  }
+  
+  std::cout << envSources[curSource] << endl;
+  loadNewSource();
 }
 
 
 void SurfaceGenerator::prevSource() {
-    curSource--;
-    if(curSource < 0) {
-        curSource = envSources.size() -1;
-    }
-    loadNewSource();
+  curSource--;
+  
+  if(curSource < 0) {
+    curSource = envSources.size() -1;
+  }
+  
+  std::cout << envSources[curSource] << endl;
+  loadNewSource();
 }

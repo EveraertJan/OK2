@@ -1,4 +1,5 @@
 ofxGif
 ofxGui
+ofxHapPlayer
 ofxOsc
 ofxXmlSettings

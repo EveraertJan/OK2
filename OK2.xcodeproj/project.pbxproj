@@ -870,6 +870,622 @@
 				<key>sourceTree</key>
 				<string>SOURCE_ROOT</string>
 			</dict>
+			<key>A9816531495AFFBC1BB87CF3</key>
+			<dict>
+				<key>explicitFileType</key>
+				<string>sourcecode.c.h</string>
+				<key>fileEncoding</key>
+				<string>4</string>
+				<key>isa</key>
+				<string>PBXFileReference</string>
+				<key>name</key>
+				<string>ofxHapPlayer.h</string>
+				<key>path</key>
+				<string>../../../addons/ofxHapPlayer/src/ofxHapPlayer.h</string>
+				<key>sourceTree</key>
+				<string>SOURCE_ROOT</string>
+			</dict>
+			<key>BBDADACACB6EAB5BEDA05FDE</key>
+			<dict>
+				<key>children</key>
+				<array>
+					<string>B3A8B29F47FD67274D82443D</string>
+					<string>A9816531495AFFBC1BB87CF3</string>
+				</array>
+				<key>isa</key>
+				<string>PBXGroup</string>
+				<key>name</key>
+				<string>src</string>
+				<key>sourceTree</key>
+				<string>&lt;group&gt;</string>
+			</dict>
+			<key>9DECE28DE972DD39553DD35C</key>
+			<dict>
+				<key>fileRef</key>
+				<string>B3A8B29F47FD67274D82443D</string>
+				<key>isa</key>
+				<string>PBXBuildFile</string>
+			</dict>
+			<key>B3A8B29F47FD67274D82443D</key>
+			<dict>
+				<key>explicitFileType</key>
+				<string>sourcecode.cpp.cpp</string>
+				<key>fileEncoding</key>
+				<string>4</string>
+				<key>isa</key>
+				<string>PBXFileReference</string>
+				<key>name</key>
+				<string>ofxHapPlayer.cpp</string>
+				<key>path</key>
+				<string>../../../addons/ofxHapPlayer/src/ofxHapPlayer.cpp</string>
+				<key>sourceTree</key>
+				<string>SOURCE_ROOT</string>
+			</dict>
+			<key>AF24098F3EE61E761F184C8F</key>
+			<dict>
+				<key>fileRef</key>
+				<string>000270D61857A9C7C7628691</string>
+				<key>isa</key>
+				<string>PBXBuildFile</string>
+			</dict>
+			<key>000270D61857A9C7C7628691</key>
+			<dict>
+				<key>explicitFileType</key>
+				<string>sourcecode.cpp.cpp</string>
+				<key>fileEncoding</key>
+				<string>4</string>
+				<key>isa</key>
+				<string>PBXFileReference</string>
+				<key>name</key>
+				<string>TimeRangeSet.cpp</string>
+				<key>path</key>
+				<string>../../../addons/ofxHapPlayer/libs/ofxHap/src/TimeRangeSet.cpp</string>
+				<key>sourceTree</key>
+				<string>SOURCE_ROOT</string>
+			</dict>
+			<key>4EC00043E3376C87F0ECA874</key>
+			<dict>
+				<key>fileRef</key>
+				<string>9A8EC2BF48E2C3C42C379138</string>
+				<key>isa</key>
+				<string>PBXBuildFile</string>
+			</dict>
+			<key>9A8EC2BF48E2C3C42C379138</key>
+			<dict>
+				<key>explicitFileType</key>
+				<string>sourcecode.cpp.cpp</string>
+				<key>fileEncoding</key>
+				<string>4</string>
+				<key>isa</key>
+				<string>PBXFileReference</string>
+				<key>name</key>
+				<string>RingBuffer.cpp</string>
+				<key>path</key>
+				<string>../../../addons/ofxHapPlayer/libs/ofxHap/src/RingBuffer.cpp</string>
+				<key>sourceTree</key>
+				<string>SOURCE_ROOT</string>
+			</dict>
+			<key>2302C21FAE47D435CF095990</key>
+			<dict>
+				<key>fileRef</key>
+				<string>2D623880D84A52CF35CA2160</string>
+				<key>isa</key>
+				<string>PBXBuildFile</string>
+			</dict>
+			<key>2D623880D84A52CF35CA2160</key>
+			<dict>
+				<key>explicitFileType</key>
+				<string>sourcecode.cpp.cpp</string>
+				<key>fileEncoding</key>
+				<string>4</string>
+				<key>isa</key>
+				<string>PBXFileReference</string>
+				<key>name</key>
+				<string>PacketCache.cpp</string>
+				<key>path</key>
+				<string>../../../addons/ofxHapPlayer/libs/ofxHap/src/PacketCache.cpp</string>
+				<key>sourceTree</key>
+				<string>SOURCE_ROOT</string>
+			</dict>
+			<key>FCE78EB42A44ECB3261E18AB</key>
+			<dict>
+				<key>fileRef</key>
+				<string>97338BB48921889487BDA51E</string>
+				<key>isa</key>
+				<string>PBXBuildFile</string>
+			</dict>
+			<key>97338BB48921889487BDA51E</key>
+			<dict>
+				<key>explicitFileType</key>
+				<string>sourcecode.cpp.cpp</string>
+				<key>fileEncoding</key>
+				<string>4</string>
+				<key>isa</key>
+				<string>PBXFileReference</string>
+				<key>name</key>
+				<string>MovieTime.cpp</string>
+				<key>path</key>
+				<string>../../../addons/ofxHapPlayer/libs/ofxHap/src/MovieTime.cpp</string>
+				<key>sourceTree</key>
+				<string>SOURCE_ROOT</string>
+			</dict>
+			<key>6D4C0ECBC21CF195A5BDBE31</key>
+			<dict>
+				<key>fileRef</key>
+				<string>EE008DE736F55C209519A9B1</string>
+				<key>isa</key>
+				<string>PBXBuildFile</string>
+			</dict>
+			<key>EE008DE736F55C209519A9B1</key>
+			<dict>
+				<key>explicitFileType</key>
+				<string>sourcecode.cpp.cpp</string>
+				<key>fileEncoding</key>
+				<string>4</string>
+				<key>isa</key>
+				<string>PBXFileReference</string>
+				<key>name</key>
+				<string>Demuxer.cpp</string>
+				<key>path</key>
+				<string>../../../addons/ofxHapPlayer/libs/ofxHap/src/Demuxer.cpp</string>
+				<key>sourceTree</key>
+				<string>SOURCE_ROOT</string>
+			</dict>
+			<key>8B40DD2B41C58FF6B6907B86</key>
+			<dict>
+				<key>fileRef</key>
+				<string>238B65DDD4862C9A94A29AB4</string>
+				<key>isa</key>
+				<string>PBXBuildFile</string>
+			</dict>
+			<key>238B65DDD4862C9A94A29AB4</key>
+			<dict>
+				<key>explicitFileType</key>
+				<string>sourcecode.cpp.cpp</string>
+				<key>fileEncoding</key>
+				<string>4</string>
+				<key>isa</key>
+				<string>PBXFileReference</string>
+				<key>name</key>
+				<string>Clock.cpp</string>
+				<key>path</key>
+				<string>../../../addons/ofxHapPlayer/libs/ofxHap/src/Clock.cpp</string>
+				<key>sourceTree</key>
+				<string>SOURCE_ROOT</string>
+			</dict>
+			<key>4774F36141444127CFF18422</key>
+			<dict>
+				<key>fileRef</key>
+				<string>1700621FD10DE4D4F9697B24</string>
+				<key>isa</key>
+				<string>PBXBuildFile</string>
+			</dict>
+			<key>1700621FD10DE4D4F9697B24</key>
+			<dict>
+				<key>explicitFileType</key>
+				<string>sourcecode.cpp.cpp</string>
+				<key>fileEncoding</key>
+				<string>4</string>
+				<key>isa</key>
+				<string>PBXFileReference</string>
+				<key>name</key>
+				<string>AudioThread.cpp</string>
+				<key>path</key>
+				<string>../../../addons/ofxHapPlayer/libs/ofxHap/src/AudioThread.cpp</string>
+				<key>sourceTree</key>
+				<string>SOURCE_ROOT</string>
+			</dict>
+			<key>4B9BF6D1580B334023C9FA9F</key>
+			<dict>
+				<key>fileRef</key>
+				<string>5F2DF17E9FEFBA2715A7A317</string>
+				<key>isa</key>
+				<string>PBXBuildFile</string>
+			</dict>
+			<key>5F2DF17E9FEFBA2715A7A317</key>
+			<dict>
+				<key>explicitFileType</key>
+				<string>sourcecode.cpp.cpp</string>
+				<key>fileEncoding</key>
+				<string>4</string>
+				<key>isa</key>
+				<string>PBXFileReference</string>
+				<key>name</key>
+				<string>AudioResampler.cpp</string>
+				<key>path</key>
+				<string>../../../addons/ofxHapPlayer/libs/ofxHap/src/AudioResampler.cpp</string>
+				<key>sourceTree</key>
+				<string>SOURCE_ROOT</string>
+			</dict>
+			<key>25F76A53846BBC81A84C5519</key>
+			<dict>
+				<key>fileRef</key>
+				<string>C0C7A497249DBD2F8DE862C9</string>
+				<key>isa</key>
+				<string>PBXBuildFile</string>
+			</dict>
+			<key>C0C7A497249DBD2F8DE862C9</key>
+			<dict>
+				<key>explicitFileType</key>
+				<string>sourcecode.cpp.cpp</string>
+				<key>fileEncoding</key>
+				<string>4</string>
+				<key>isa</key>
+				<string>PBXFileReference</string>
+				<key>name</key>
+				<string>AudioParameters.cpp</string>
+				<key>path</key>
+				<string>../../../addons/ofxHapPlayer/libs/ofxHap/src/AudioParameters.cpp</string>
+				<key>sourceTree</key>
+				<string>SOURCE_ROOT</string>
+			</dict>
+			<key>2EC5155BBB4AFAE8E1B719E7</key>
+			<dict>
+				<key>children</key>
+				<array>
+					<string>E190CC61090BCFFC54D69770</string>
+					<string>C0C7A497249DBD2F8DE862C9</string>
+					<string>5F2DF17E9FEFBA2715A7A317</string>
+					<string>1700621FD10DE4D4F9697B24</string>
+					<string>238B65DDD4862C9A94A29AB4</string>
+					<string>EE008DE736F55C209519A9B1</string>
+					<string>97338BB48921889487BDA51E</string>
+					<string>2D623880D84A52CF35CA2160</string>
+					<string>9A8EC2BF48E2C3C42C379138</string>
+					<string>000270D61857A9C7C7628691</string>
+				</array>
+				<key>isa</key>
+				<string>PBXGroup</string>
+				<key>name</key>
+				<string>src</string>
+				<key>sourceTree</key>
+				<string>&lt;group&gt;</string>
+			</dict>
+			<key>9A375B432B98EE95A23FD001</key>
+			<dict>
+				<key>fileRef</key>
+				<string>E190CC61090BCFFC54D69770</string>
+				<key>isa</key>
+				<string>PBXBuildFile</string>
+			</dict>
+			<key>E190CC61090BCFFC54D69770</key>
+			<dict>
+				<key>explicitFileType</key>
+				<string>sourcecode.cpp.cpp</string>
+				<key>fileEncoding</key>
+				<string>4</string>
+				<key>isa</key>
+				<string>PBXFileReference</string>
+				<key>name</key>
+				<string>AudioDecoder.cpp</string>
+				<key>path</key>
+				<string>../../../addons/ofxHapPlayer/libs/ofxHap/src/AudioDecoder.cpp</string>
+				<key>sourceTree</key>
+				<string>SOURCE_ROOT</string>
+			</dict>
+			<key>A3CD349FD8C7B388CE841D0D</key>
+			<dict>
+				<key>explicitFileType</key>
+				<string>sourcecode.c.h</string>
+				<key>fileEncoding</key>
+				<string>4</string>
+				<key>isa</key>
+				<string>PBXFileReference</string>
+				<key>name</key>
+				<string>TimeRangeSet.h</string>
+				<key>path</key>
+				<string>../../../addons/ofxHapPlayer/libs/ofxHap/include/ofxHap/TimeRangeSet.h</string>
+				<key>sourceTree</key>
+				<string>SOURCE_ROOT</string>
+			</dict>
+			<key>FAE24647AFB9C4EDBDDA0EE8</key>
+			<dict>
+				<key>explicitFileType</key>
+				<string>sourcecode.c.h</string>
+				<key>fileEncoding</key>
+				<string>4</string>
+				<key>isa</key>
+				<string>PBXFileReference</string>
+				<key>name</key>
+				<string>RingBuffer.h</string>
+				<key>path</key>
+				<string>../../../addons/ofxHapPlayer/libs/ofxHap/include/ofxHap/RingBuffer.h</string>
+				<key>sourceTree</key>
+				<string>SOURCE_ROOT</string>
+			</dict>
+			<key>44A7B4A73286DB60EC1938DC</key>
+			<dict>
+				<key>explicitFileType</key>
+				<string>sourcecode.c.h</string>
+				<key>fileEncoding</key>
+				<string>4</string>
+				<key>isa</key>
+				<string>PBXFileReference</string>
+				<key>name</key>
+				<string>PacketCache.h</string>
+				<key>path</key>
+				<string>../../../addons/ofxHapPlayer/libs/ofxHap/include/ofxHap/PacketCache.h</string>
+				<key>sourceTree</key>
+				<string>SOURCE_ROOT</string>
+			</dict>
+			<key>4D40695920B3379E19F1A11D</key>
+			<dict>
+				<key>explicitFileType</key>
+				<string>sourcecode.c.h</string>
+				<key>fileEncoding</key>
+				<string>4</string>
+				<key>isa</key>
+				<string>PBXFileReference</string>
+				<key>name</key>
+				<string>MovieTime.h</string>
+				<key>path</key>
+				<string>../../../addons/ofxHapPlayer/libs/ofxHap/include/ofxHap/MovieTime.h</string>
+				<key>sourceTree</key>
+				<string>SOURCE_ROOT</string>
+			</dict>
+			<key>2CB998AF03E1DC191394C214</key>
+			<dict>
+				<key>explicitFileType</key>
+				<string>sourcecode.c.h</string>
+				<key>fileEncoding</key>
+				<string>4</string>
+				<key>isa</key>
+				<string>PBXFileReference</string>
+				<key>name</key>
+				<string>ErrorReceiving.h</string>
+				<key>path</key>
+				<string>../../../addons/ofxHapPlayer/libs/ofxHap/include/ofxHap/ErrorReceiving.h</string>
+				<key>sourceTree</key>
+				<string>SOURCE_ROOT</string>
+			</dict>
+			<key>C7E31A41D29A71BC7651883D</key>
+			<dict>
+				<key>explicitFileType</key>
+				<string>sourcecode.c.h</string>
+				<key>fileEncoding</key>
+				<string>4</string>
+				<key>isa</key>
+				<string>PBXFileReference</string>
+				<key>name</key>
+				<string>Demuxer.h</string>
+				<key>path</key>
+				<string>../../../addons/ofxHapPlayer/libs/ofxHap/include/ofxHap/Demuxer.h</string>
+				<key>sourceTree</key>
+				<string>SOURCE_ROOT</string>
+			</dict>
+			<key>C8ACC5ADB42FB88EC0A6BA43</key>
+			<dict>
+				<key>explicitFileType</key>
+				<string>sourcecode.c.h</string>
+				<key>fileEncoding</key>
+				<string>4</string>
+				<key>isa</key>
+				<string>PBXFileReference</string>
+				<key>name</key>
+				<string>Common.h</string>
+				<key>path</key>
+				<string>../../../addons/ofxHapPlayer/libs/ofxHap/include/ofxHap/Common.h</string>
+				<key>sourceTree</key>
+				<string>SOURCE_ROOT</string>
+			</dict>
+			<key>5168D41D3FD219BF54E02804</key>
+			<dict>
+				<key>explicitFileType</key>
+				<string>sourcecode.c.h</string>
+				<key>fileEncoding</key>
+				<string>4</string>
+				<key>isa</key>
+				<string>PBXFileReference</string>
+				<key>name</key>
+				<string>Clock.h</string>
+				<key>path</key>
+				<string>../../../addons/ofxHapPlayer/libs/ofxHap/include/ofxHap/Clock.h</string>
+				<key>sourceTree</key>
+				<string>SOURCE_ROOT</string>
+			</dict>
+			<key>AC1ED9E2EADE684C6250AB38</key>
+			<dict>
+				<key>explicitFileType</key>
+				<string>sourcecode.c.h</string>
+				<key>fileEncoding</key>
+				<string>4</string>
+				<key>isa</key>
+				<string>PBXFileReference</string>
+				<key>name</key>
+				<string>AudioThread.h</string>
+				<key>path</key>
+				<string>../../../addons/ofxHapPlayer/libs/ofxHap/include/ofxHap/AudioThread.h</string>
+				<key>sourceTree</key>
+				<string>SOURCE_ROOT</string>
+			</dict>
+			<key>77AC83A7566E052535EFA339</key>
+			<dict>
+				<key>explicitFileType</key>
+				<string>sourcecode.c.h</string>
+				<key>fileEncoding</key>
+				<string>4</string>
+				<key>isa</key>
+				<string>PBXFileReference</string>
+				<key>name</key>
+				<string>AudioResampler.h</string>
+				<key>path</key>
+				<string>../../../addons/ofxHapPlayer/libs/ofxHap/include/ofxHap/AudioResampler.h</string>
+				<key>sourceTree</key>
+				<string>SOURCE_ROOT</string>
+			</dict>
+			<key>9FA6754E55758AF846AF0E83</key>
+			<dict>
+				<key>explicitFileType</key>
+				<string>sourcecode.c.h</string>
+				<key>fileEncoding</key>
+				<string>4</string>
+				<key>isa</key>
+				<string>PBXFileReference</string>
+				<key>name</key>
+				<string>AudioParameters.h</string>
+				<key>path</key>
+				<string>../../../addons/ofxHapPlayer/libs/ofxHap/include/ofxHap/AudioParameters.h</string>
+				<key>sourceTree</key>
+				<string>SOURCE_ROOT</string>
+			</dict>
+			<key>7C5E4E98933A05F194AE813A</key>
+			<dict>
+				<key>children</key>
+				<array>
+					<string>01ACF32DD2BE3FB5BC5DFA8A</string>
+					<string>9FA6754E55758AF846AF0E83</string>
+					<string>77AC83A7566E052535EFA339</string>
+					<string>AC1ED9E2EADE684C6250AB38</string>
+					<string>5168D41D3FD219BF54E02804</string>
+					<string>C8ACC5ADB42FB88EC0A6BA43</string>
+					<string>C7E31A41D29A71BC7651883D</string>
+					<string>2CB998AF03E1DC191394C214</string>
+					<string>4D40695920B3379E19F1A11D</string>
+					<string>44A7B4A73286DB60EC1938DC</string>
+					<string>FAE24647AFB9C4EDBDDA0EE8</string>
+					<string>A3CD349FD8C7B388CE841D0D</string>
+				</array>
+				<key>isa</key>
+				<string>PBXGroup</string>
+				<key>name</key>
+				<string>ofxHap</string>
+				<key>sourceTree</key>
+				<string>&lt;group&gt;</string>
+			</dict>
+			<key>2F54A7F907FE7148918F7780</key>
+			<dict>
+				<key>children</key>
+				<array>
+					<string>7C5E4E98933A05F194AE813A</string>
+				</array>
+				<key>isa</key>
+				<string>PBXGroup</string>
+				<key>name</key>
+				<string>include</string>
+				<key>sourceTree</key>
+				<string>&lt;group&gt;</string>
+			</dict>
+			<key>6BA06186AF1C74A7B5F517D6</key>
+			<dict>
+				<key>children</key>
+				<array>
+					<string>2F54A7F907FE7148918F7780</string>
+					<string>2EC5155BBB4AFAE8E1B719E7</string>
+				</array>
+				<key>isa</key>
+				<string>PBXGroup</string>
+				<key>name</key>
+				<string>ofxHap</string>
+				<key>sourceTree</key>
+				<string>&lt;group&gt;</string>
+			</dict>
+			<key>01ACF32DD2BE3FB5BC5DFA8A</key>
+			<dict>
+				<key>explicitFileType</key>
+				<string>sourcecode.c.h</string>
+				<key>fileEncoding</key>
+				<string>4</string>
+				<key>isa</key>
+				<string>PBXFileReference</string>
+				<key>name</key>
+				<string>AudioDecoder.h</string>
+				<key>path</key>
+				<string>../../../addons/ofxHapPlayer/libs/ofxHap/include/ofxHap/AudioDecoder.h</string>
+				<key>sourceTree</key>
+				<string>SOURCE_ROOT</string>
+			</dict>
+			<key>15EECCAE1A639FE0771146E3</key>
+			<dict>
+				<key>explicitFileType</key>
+				<string>sourcecode.c.h</string>
+				<key>fileEncoding</key>
+				<string>4</string>
+				<key>isa</key>
+				<string>PBXFileReference</string>
+				<key>name</key>
+				<string>hap.h</string>
+				<key>path</key>
+				<string>../../../addons/ofxHapPlayer/libs/hap/src/hap.h</string>
+				<key>sourceTree</key>
+				<string>SOURCE_ROOT</string>
+			</dict>
+			<key>31EDD8632EE5643250EF7BBA</key>
+			<dict>
+				<key>children</key>
+				<array>
+					<string>C8F6794ACA9E9E23B93E0350</string>
+					<string>15EECCAE1A639FE0771146E3</string>
+				</array>
+				<key>isa</key>
+				<string>PBXGroup</string>
+				<key>name</key>
+				<string>src</string>
+				<key>sourceTree</key>
+				<string>&lt;group&gt;</string>
+			</dict>
+			<key>E09D8B6334004E7315770DB3</key>
+			<dict>
+				<key>children</key>
+				<array>
+					<string>31EDD8632EE5643250EF7BBA</string>
+				</array>
+				<key>isa</key>
+				<string>PBXGroup</string>
+				<key>name</key>
+				<string>hap</string>
+				<key>sourceTree</key>
+				<string>&lt;group&gt;</string>
+			</dict>
+			<key>79FD7615976472BC2D2C3851</key>
+			<dict>
+				<key>children</key>
+				<array>
+					<string>E09D8B6334004E7315770DB3</string>
+					<string>6BA06186AF1C74A7B5F517D6</string>
+				</array>
+				<key>isa</key>
+				<string>PBXGroup</string>
+				<key>name</key>
+				<string>libs</string>
+				<key>sourceTree</key>
+				<string>&lt;group&gt;</string>
+			</dict>
+			<key>123746A97018087522D6BDFF</key>
+			<dict>
+				<key>children</key>
+				<array>
+					<string>79FD7615976472BC2D2C3851</string>
+					<string>BBDADACACB6EAB5BEDA05FDE</string>
+				</array>
+				<key>isa</key>
+				<string>PBXGroup</string>
+				<key>name</key>
+				<string>ofxHapPlayer</string>
+				<key>sourceTree</key>
+				<string>&lt;group&gt;</string>
+			</dict>
+			<key>D2589C81FE555C37DFA9890C</key>
+			<dict>
+				<key>fileRef</key>
+				<string>C8F6794ACA9E9E23B93E0350</string>
+				<key>isa</key>
+				<string>PBXBuildFile</string>
+			</dict>
+			<key>C8F6794ACA9E9E23B93E0350</key>
+			<dict>
+				<key>explicitFileType</key>
+				<string>sourcecode.c.c</string>
+				<key>fileEncoding</key>
+				<string>4</string>
+				<key>isa</key>
+				<string>PBXFileReference</string>
+				<key>name</key>
+				<string>hap.c</string>
+				<key>path</key>
+				<string>../../../addons/ofxHapPlayer/libs/hap/src/hap.c</string>
+				<key>sourceTree</key>
+				<string>SOURCE_ROOT</string>
+			</dict>
 			<key>0A1DAC09F322AE313A40706D</key>
 			<dict>
 				<key>explicitFileType</key>
@@ -1396,6 +2012,28 @@
 				<key>sourceTree</key>
 				<string>SOURCE_ROOT</string>
 			</dict>
+			<key>1E3E2CD14F92B1F4381B7F54</key>
+			<dict>
+				<key>fileRef</key>
+				<string>76594A40F45EDEF5846AB536</string>
+				<key>isa</key>
+				<string>PBXBuildFile</string>
+			</dict>
+			<key>76594A40F45EDEF5846AB536</key>
+			<dict>
+				<key>explicitFileType</key>
+				<string>file</string>
+				<key>fileEncoding</key>
+				<string>4</string>
+				<key>isa</key>
+				<string>PBXFileReference</string>
+				<key>name</key>
+				<string>settings.template</string>
+				<key>path</key>
+				<string>src/settings.template</string>
+				<key>sourceTree</key>
+				<string>SOURCE_ROOT</string>
+			</dict>
 			<key>07984E3D0FDCC3879B33497E</key>
 			<dict>
 				<key>fileRef</key>
@@ -1714,6 +2352,23 @@ fi
 						<string>src</string>
 						<string>../../../addons/ofxGif/src</string>
 						<string>../../../addons/ofxGui/src</string>
+						<string>../../../addons/ofxHapPlayer/libs</string>
+						<string>../../../addons/ofxHapPlayer/libs/ffmpeg</string>
+						<string>../../../addons/ofxHapPlayer/libs/ffmpeg/include</string>
+						<string>../../../addons/ofxHapPlayer/libs/ffmpeg/lib</string>
+						<string>../../../addons/ofxHapPlayer/libs/ffmpeg/lib/osx</string>
+						<string>../../../addons/ofxHapPlayer/libs/hap</string>
+						<string>../../../addons/ofxHapPlayer/libs/hap/src</string>
+						<string>../../../addons/ofxHapPlayer/libs/ofxHap</string>
+						<string>../../../addons/ofxHapPlayer/libs/ofxHap/include</string>
+						<string>../../../addons/ofxHapPlayer/libs/ofxHap/include/ofxHap</string>
+						<string>../../../addons/ofxHapPlayer/libs/ofxHap/src</string>
+						<string>../../../addons/ofxHapPlayer/libs/snappy</string>
+						<string>../../../addons/ofxHapPlayer/libs/snappy/include</string>
+						<string>../../../addons/ofxHapPlayer/libs/snappy/lib</string>
+						<string>../../../addons/ofxHapPlayer/libs/snappy/lib/osx</string>
+						<string>../../../addons/ofxHapPlayer/libs/snappy/license</string>
+						<string>../../../addons/ofxHapPlayer/src</string>
 						<string>../../../addons/ofxOsc/libs</string>
 						<string>../../../addons/ofxOsc/libs/oscpack</string>
 						<string>../../../addons/ofxOsc/libs/oscpack/src</string>
@@ -1768,6 +2423,23 @@ fi
 						<string>src</string>
 						<string>../../../addons/ofxGif/src</string>
 						<string>../../../addons/ofxGui/src</string>
+						<string>../../../addons/ofxHapPlayer/libs</string>
+						<string>../../../addons/ofxHapPlayer/libs/ffmpeg</string>
+						<string>../../../addons/ofxHapPlayer/libs/ffmpeg/include</string>
+						<string>../../../addons/ofxHapPlayer/libs/ffmpeg/lib</string>
+						<string>../../../addons/ofxHapPlayer/libs/ffmpeg/lib/osx</string>
+						<string>../../../addons/ofxHapPlayer/libs/hap</string>
+						<string>../../../addons/ofxHapPlayer/libs/hap/src</string>
+						<string>../../../addons/ofxHapPlayer/libs/ofxHap</string>
+						<string>../../../addons/ofxHapPlayer/libs/ofxHap/include</string>
+						<string>../../../addons/ofxHapPlayer/libs/ofxHap/include/ofxHap</string>
+						<string>../../../addons/ofxHapPlayer/libs/ofxHap/src</string>
+						<string>../../../addons/ofxHapPlayer/libs/snappy</string>
+						<string>../../../addons/ofxHapPlayer/libs/snappy/include</string>
+						<string>../../../addons/ofxHapPlayer/libs/snappy/lib</string>
+						<string>../../../addons/ofxHapPlayer/libs/snappy/lib/osx</string>
+						<string>../../../addons/ofxHapPlayer/libs/snappy/license</string>
+						<string>../../../addons/ofxHapPlayer/src</string>
 						<string>../../../addons/ofxOsc/libs</string>
 						<string>../../../addons/ofxOsc/libs/oscpack</string>
 						<string>../../../addons/ofxOsc/libs/oscpack/src</string>
@@ -1796,6 +2468,23 @@ fi
 						<string>$(OF_CORE_LIBS)</string>
 						<string>$(OF_CORE_FRAMEWORKS)</string>
 						<string>$(LIB_OF)</string>
+						<string>../../../addons/ofxHapPlayer/libs/ffmpeg/lib/osx/libavutil.56.70.100.dylib</string>
+						<string>../../../addons/ofxHapPlayer/libs/ffmpeg/lib/osx/libswresample.3.9.100.dylib</string>
+						<string>../../../addons/ofxHapPlayer/libs/ffmpeg/lib/osx/libavformat.58.76.100.dylib</string>
+						<string>../../../addons/ofxHapPlayer/libs/ffmpeg/lib/osx/libavformat.58.76.100.dylib</string>
+						<string>../../../addons/ofxHapPlayer/libs/ffmpeg/lib/osx/libswresample.3.9.100.dylib</string>
+						<string>../../../addons/ofxHapPlayer/libs/ffmpeg/lib/osx/libavformat.58.76.100.dylib</string>
+						<string>../../../addons/ofxHapPlayer/libs/ffmpeg/lib/osx/libavutil.56.70.100.dylib</string>
+						<string>../../../addons/ofxHapPlayer/libs/ffmpeg/lib/osx/libavutil.56.70.100.dylib</string>
+						<string>../../../addons/ofxHapPlayer/libs/ffmpeg/lib/osx/libavcodec.58.134.100.dylib</string>
+						<string>../../../addons/ofxHapPlayer/libs/ffmpeg/lib/osx/libswresample.3.9.100.dylib</string>
+						<string>../../../addons/ofxHapPlayer/libs/ffmpeg/lib/osx/libavcodec.58.134.100.dylib</string>
+						<string>../../../addons/ofxHapPlayer/libs/ffmpeg/lib/osx/libavcodec.58.134.100.dylib</string>
+						<string>../../../addons/ofxHapPlayer/libs/snappy/lib/osx/libsnappy.1.1.9.dylib</string>
+						<string>../../../addons/ofxHapPlayer/libs/snappy/lib/osx/libsnappy.1.1.9.dylib</string>
+						<string>../../../addons/ofxHapPlayer/libs/snappy/lib/osx/libsnappy.1.1.9.dylib</string>
+						<string>-rpath</string>
+						<string>@loader_path/../../../../../../../addons/ofxHapPlayer/libs</string>
 					</array>
 					<key>PRODUCT_NAME</key>
 					<string>$(TARGET_NAME)</string>
@@ -1815,6 +2504,7 @@ fi
 				<array>
 					<string>53BDA0E957B4123A28C53282</string>
 					<string>480A780D8D0308AE4A368801</string>
+					<string>123746A97018087522D6BDFF</string>
 					<string>E6053AB7FEC63D5F83825B88</string>
 					<string>1F4FB5C423662B96ADFDCC0B</string>
 				</array>
@@ -4585,6 +5275,23 @@ fi
 						<string>src</string>
 						<string>../../../addons/ofxGif/src</string>
 						<string>../../../addons/ofxGui/src</string>
+						<string>../../../addons/ofxHapPlayer/libs</string>
+						<string>../../../addons/ofxHapPlayer/libs/ffmpeg</string>
+						<string>../../../addons/ofxHapPlayer/libs/ffmpeg/include</string>
+						<string>../../../addons/ofxHapPlayer/libs/ffmpeg/lib</string>
+						<string>../../../addons/ofxHapPlayer/libs/ffmpeg/lib/osx</string>
+						<string>../../../addons/ofxHapPlayer/libs/hap</string>
+						<string>../../../addons/ofxHapPlayer/libs/hap/src</string>
+						<string>../../../addons/ofxHapPlayer/libs/ofxHap</string>
+						<string>../../../addons/ofxHapPlayer/libs/ofxHap/include</string>
+						<string>../../../addons/ofxHapPlayer/libs/ofxHap/include/ofxHap</string>
+						<string>../../../addons/ofxHapPlayer/libs/ofxHap/src</string>
+						<string>../../../addons/ofxHapPlayer/libs/snappy</string>
+						<string>../../../addons/ofxHapPlayer/libs/snappy/include</string>
+						<string>../../../addons/ofxHapPlayer/libs/snappy/lib</string>
+						<string>../../../addons/ofxHapPlayer/libs/snappy/lib/osx</string>
+						<string>../../../addons/ofxHapPlayer/libs/snappy/license</string>
+						<string>../../../addons/ofxHapPlayer/src</string>
 						<string>../../../addons/ofxOsc/libs</string>
 						<string>../../../addons/ofxOsc/libs/oscpack</string>
 						<string>../../../addons/ofxOsc/libs/oscpack/src</string>
@@ -4659,6 +5366,23 @@ fi
 						<string>src</string>
 						<string>../../../addons/ofxGif/src</string>
 						<string>../../../addons/ofxGui/src</string>
+						<string>../../../addons/ofxHapPlayer/libs</string>
+						<string>../../../addons/ofxHapPlayer/libs/ffmpeg</string>
+						<string>../../../addons/ofxHapPlayer/libs/ffmpeg/include</string>
+						<string>../../../addons/ofxHapPlayer/libs/ffmpeg/lib</string>
+						<string>../../../addons/ofxHapPlayer/libs/ffmpeg/lib/osx</string>
+						<string>../../../addons/ofxHapPlayer/libs/hap</string>
+						<string>../../../addons/ofxHapPlayer/libs/hap/src</string>
+						<string>../../../addons/ofxHapPlayer/libs/ofxHap</string>
+						<string>../../../addons/ofxHapPlayer/libs/ofxHap/include</string>
+						<string>../../../addons/ofxHapPlayer/libs/ofxHap/include/ofxHap</string>
+						<string>../../../addons/ofxHapPlayer/libs/ofxHap/src</string>
+						<string>../../../addons/ofxHapPlayer/libs/snappy</string>
+						<string>../../../addons/ofxHapPlayer/libs/snappy/include</string>
+						<string>../../../addons/ofxHapPlayer/libs/snappy/lib</string>
+						<string>../../../addons/ofxHapPlayer/libs/snappy/lib/osx</string>
+						<string>../../../addons/ofxHapPlayer/libs/snappy/license</string>
+						<string>../../../addons/ofxHapPlayer/src</string>
 						<string>../../../addons/ofxOsc/libs</string>
 						<string>../../../addons/ofxOsc/libs/oscpack</string>
 						<string>../../../addons/ofxOsc/libs/oscpack/src</string>
@@ -4698,6 +5422,7 @@ fi
 					<string>0BA98BC4A8B0D9A3F7E7CF10</string>
 					<string>CAF812E1CEF4D64E45DAA3B5</string>
 					<string>07984E3D0FDCC3879B33497E</string>
+					<string>1E3E2CD14F92B1F4381B7F54</string>
 					<string>9D8D3DD2B97877B7C7C0730E</string>
 					<string>856AA354D08AB4B323081444</string>
 					<string>5CBB2AB3A60F65431D7B555D</string>
@@ -4709,6 +5434,18 @@ fi
 					<string>837220E80EB56CD44AD27F2A</string>
 					<string>B56FE57CC35806596D38118C</string>
 					<string>1CD33E884D9E3358252E82A1</string>
+					<string>D2589C81FE555C37DFA9890C</string>
+					<string>9A375B432B98EE95A23FD001</string>
+					<string>25F76A53846BBC81A84C5519</string>
+					<string>4B9BF6D1580B334023C9FA9F</string>
+					<string>4774F36141444127CFF18422</string>
+					<string>8B40DD2B41C58FF6B6907B86</string>
+					<string>6D4C0ECBC21CF195A5BDBE31</string>
+					<string>FCE78EB42A44ECB3261E18AB</string>
+					<string>2302C21FAE47D435CF095990</string>
+					<string>4EC00043E3376C87F0ECA874</string>
+					<string>AF24098F3EE61E761F184C8F</string>
+					<string>9DECE28DE972DD39553DD35C</string>
 					<string>ADE367465D2A8EBAD4C7A8D9</string>
 					<string>67FE4C7B15C2F0478C8126C2</string>
 					<string>510CAFE035E576A4E1502D52</string>
@@ -4827,6 +5564,23 @@ fi
 						<string>src</string>
 						<string>../../../addons/ofxGif/src</string>
 						<string>../../../addons/ofxGui/src</string>
+						<string>../../../addons/ofxHapPlayer/libs</string>
+						<string>../../../addons/ofxHapPlayer/libs/ffmpeg</string>
+						<string>../../../addons/ofxHapPlayer/libs/ffmpeg/include</string>
+						<string>../../../addons/ofxHapPlayer/libs/ffmpeg/lib</string>
+						<string>../../../addons/ofxHapPlayer/libs/ffmpeg/lib/osx</string>
+						<string>../../../addons/ofxHapPlayer/libs/hap</string>
+						<string>../../../addons/ofxHapPlayer/libs/hap/src</string>
+						<string>../../../addons/ofxHapPlayer/libs/ofxHap</string>
+						<string>../../../addons/ofxHapPlayer/libs/ofxHap/include</string>
+						<string>../../../addons/ofxHapPlayer/libs/ofxHap/include/ofxHap</string>
+						<string>../../../addons/ofxHapPlayer/libs/ofxHap/src</string>
+						<string>../../../addons/ofxHapPlayer/libs/snappy</string>
+						<string>../../../addons/ofxHapPlayer/libs/snappy/include</string>
+						<string>../../../addons/ofxHapPlayer/libs/snappy/lib</string>
+						<string>../../../addons/ofxHapPlayer/libs/snappy/lib/osx</string>
+						<string>../../../addons/ofxHapPlayer/libs/snappy/license</string>
+						<string>../../../addons/ofxHapPlayer/src</string>
 						<string>../../../addons/ofxOsc/libs</string>
 						<string>../../../addons/ofxOsc/libs/oscpack</string>
 						<string>../../../addons/ofxOsc/libs/oscpack/src</string>
@@ -4855,6 +5609,23 @@ fi
 						<string>$(OF_CORE_LIBS)</string>
 						<string>$(OF_CORE_FRAMEWORKS)</string>
 						<string>$(LIB_OF_DEBUG)</string>
+						<string>../../../addons/ofxHapPlayer/libs/ffmpeg/lib/osx/libavutil.56.70.100.dylib</string>
+						<string>../../../addons/ofxHapPlayer/libs/ffmpeg/lib/osx/libswresample.3.9.100.dylib</string>
+						<string>../../../addons/ofxHapPlayer/libs/ffmpeg/lib/osx/libavformat.58.76.100.dylib</string>
+						<string>../../../addons/ofxHapPlayer/libs/ffmpeg/lib/osx/libavformat.58.76.100.dylib</string>
+						<string>../../../addons/ofxHapPlayer/libs/ffmpeg/lib/osx/libswresample.3.9.100.dylib</string>
+						<string>../../../addons/ofxHapPlayer/libs/ffmpeg/lib/osx/libavformat.58.76.100.dylib</string>
+						<string>../../../addons/ofxHapPlayer/libs/ffmpeg/lib/osx/libavutil.56.70.100.dylib</string>
+						<string>../../../addons/ofxHapPlayer/libs/ffmpeg/lib/osx/libavutil.56.70.100.dylib</string>
+						<string>../../../addons/ofxHapPlayer/libs/ffmpeg/lib/osx/libavcodec.58.134.100.dylib</string>
+						<string>../../../addons/ofxHapPlayer/libs/ffmpeg/lib/osx/libswresample.3.9.100.dylib</string>
+						<string>../../../addons/ofxHapPlayer/libs/ffmpeg/lib/osx/libavcodec.58.134.100.dylib</string>
+						<string>../../../addons/ofxHapPlayer/libs/ffmpeg/lib/osx/libavcodec.58.134.100.dylib</string>
+						<string>../../../addons/ofxHapPlayer/libs/snappy/lib/osx/libsnappy.1.1.9.dylib</string>
+						<string>../../../addons/ofxHapPlayer/libs/snappy/lib/osx/libsnappy.1.1.9.dylib</string>
+						<string>../../../addons/ofxHapPlayer/libs/snappy/lib/osx/libsnappy.1.1.9.dylib</string>
+						<string>-rpath</string>
+						<string>@loader_path/../../../../../../../addons/ofxHapPlayer/libs</string>
 					</array>
 					<key>PRODUCT_NAME</key>
 					<string>$(TARGET_NAME)Debug</string>
@@ -4891,6 +5662,23 @@ fi
 						<string>src</string>
 						<string>../../../addons/ofxGif/src</string>
 						<string>../../../addons/ofxGui/src</string>
+						<string>../../../addons/ofxHapPlayer/libs</string>
+						<string>../../../addons/ofxHapPlayer/libs/ffmpeg</string>
+						<string>../../../addons/ofxHapPlayer/libs/ffmpeg/include</string>
+						<string>../../../addons/ofxHapPlayer/libs/ffmpeg/lib</string>
+						<string>../../../addons/ofxHapPlayer/libs/ffmpeg/lib/osx</string>
+						<string>../../../addons/ofxHapPlayer/libs/hap</string>
+						<string>../../../addons/ofxHapPlayer/libs/hap/src</string>
+						<string>../../../addons/ofxHapPlayer/libs/ofxHap</string>
+						<string>../../../addons/ofxHapPlayer/libs/ofxHap/include</string>
+						<string>../../../addons/ofxHapPlayer/libs/ofxHap/include/ofxHap</string>
+						<string>../../../addons/ofxHapPlayer/libs/ofxHap/src</string>
+						<string>../../../addons/ofxHapPlayer/libs/snappy</string>
+						<string>../../../addons/ofxHapPlayer/libs/snappy/include</string>
+						<string>../../../addons/ofxHapPlayer/libs/snappy/lib</string>
+						<string>../../../addons/ofxHapPlayer/libs/snappy/lib/osx</string>
+						<string>../../../addons/ofxHapPlayer/libs/snappy/license</string>
+						<string>../../../addons/ofxHapPlayer/src</string>
 						<string>../../../addons/ofxOsc/libs</string>
 						<string>../../../addons/ofxOsc/libs/oscpack</string>
 						<string>../../../addons/ofxOsc/libs/oscpack/src</string>
@@ -4919,6 +5707,23 @@ fi
 						<string>$(OF_CORE_LIBS)</string>
 						<string>$(OF_CORE_FRAMEWORKS)</string>
 						<string>$(LIB_OF)</string>
+						<string>../../../addons/ofxHapPlayer/libs/ffmpeg/lib/osx/libavutil.56.70.100.dylib</string>
+						<string>../../../addons/ofxHapPlayer/libs/ffmpeg/lib/osx/libswresample.3.9.100.dylib</string>
+						<string>../../../addons/ofxHapPlayer/libs/ffmpeg/lib/osx/libavformat.58.76.100.dylib</string>
+						<string>../../../addons/ofxHapPlayer/libs/ffmpeg/lib/osx/libavformat.58.76.100.dylib</string>
+						<string>../../../addons/ofxHapPlayer/libs/ffmpeg/lib/osx/libswresample.3.9.100.dylib</string>
+						<string>../../../addons/ofxHapPlayer/libs/ffmpeg/lib/osx/libavformat.58.76.100.dylib</string>
+						<string>../../../addons/ofxHapPlayer/libs/ffmpeg/lib/osx/libavutil.56.70.100.dylib</string>
+						<string>../../../addons/ofxHapPlayer/libs/ffmpeg/lib/osx/libavutil.56.70.100.dylib</string>
+						<string>../../../addons/ofxHapPlayer/libs/ffmpeg/lib/osx/libavcodec.58.134.100.dylib</string>
+						<string>../../../addons/ofxHapPlayer/libs/ffmpeg/lib/osx/libswresample.3.9.100.dylib</string>
+						<string>../../../addons/ofxHapPlayer/libs/ffmpeg/lib/osx/libavcodec.58.134.100.dylib</string>
+						<string>../../../addons/ofxHapPlayer/libs/ffmpeg/lib/osx/libavcodec.58.134.100.dylib</string>
+						<string>../../../addons/ofxHapPlayer/libs/snappy/lib/osx/libsnappy.1.1.9.dylib</string>
+						<string>../../../addons/ofxHapPlayer/libs/snappy/lib/osx/libsnappy.1.1.9.dylib</string>
+						<string>../../../addons/ofxHapPlayer/libs/snappy/lib/osx/libsnappy.1.1.9.dylib</string>
+						<string>-rpath</string>
+						<string>@loader_path/../../../../../../../addons/ofxHapPlayer/libs</string>
 					</array>
 					<key>PRODUCT_NAME</key>
 					<string>$(TARGET_NAME)</string>
@@ -4947,6 +5752,7 @@ fi
 					<string>06A5412EE3E2108CC7AE9C6D</string>
 					<string>E7819116E6E445F5FC59FBE4</string>
 					<string>291B5A919BD374C0C3616ADC</string>
+					<string>76594A40F45EDEF5846AB536</string>
 					<string>C3B52C474FF00306564BE460</string>
 				</array>
 				<key>isa</key>

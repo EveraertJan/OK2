@@ -19,29 +19,29 @@
 
 class Presets
 {
-
+  
 public:
   void setup(ofxOscSender s);
-
+  
   void update();
-
+  
   void draw(ofFbo surface, bool DEBUG);
-
+  
   void handleOSC(ofxOscMessage msg);
   void createNew();
   void saveSettings();
   void loadSettings();
-
+  
   void prevPreset();
   void nextPreset();
-
+  
   void sendMessage(string channel, int value);
-
+  
   ofxOscSender sender;
-
+  
   int currentPreset;
   vector<Preset> presets;
-
+  
   bool DEBUG = true;
 };
 

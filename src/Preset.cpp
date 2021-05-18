@@ -8,7 +8,7 @@ void Preset::setup(vector<ProjectionMesh> meshes)
   //     ofGetWidth() - 100, 100,
   //     ofGetWidth() - 100, ofGetHeight() - 100,
   //     100, ofGetHeight() - 100);
-
+  
   currentMeshes = meshes;
 }
 
@@ -37,16 +37,16 @@ void Preset::handleOSC(ofxOscMessage msg)
 {
   string a = msg.getAddress();
   // std::cout << a << endl;
-
+  
   if (a == "/preset/mesh/add")
   {
     std::cout << "adding mesh" << endl;
     ProjectionMesh m;
     m.setup(
-        100, 100,
-        ofGetWidth() - 100, 100,
-        ofGetWidth() - 100, ofGetHeight() - 100,
-        100, ofGetHeight() - 100);
+            100, 100,
+            ofGetWidth() - 100, 100,
+            ofGetWidth() - 100, ofGetHeight() - 100,
+            100, ofGetHeight() - 100);
     currentMeshes.push_back(m);
     curMesh++;
   };
@@ -59,7 +59,7 @@ void Preset::handleOSC(ofxOscMessage msg)
       curMesh--;
     }
   };
-
+  
   if (a == "/preset/mesh/prev")
   {
     curMesh--;
@@ -79,7 +79,7 @@ void Preset::handleOSC(ofxOscMessage msg)
     std::cout << "next mesh" << curMesh << endl;
   };
   currentMeshes[curMesh].handleOSC(msg);
-
+  
   // if (a == "/keystoneV")
   // {
   //   keyStoneV = msg.getArgAsFloat(0);
