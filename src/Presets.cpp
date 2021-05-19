@@ -33,31 +33,39 @@ void Presets::saveSettings()
   {
     settings.addTag("preset");
     settings.pushTag("preset", h);
-    
     Preset p = presets[h];
-    
-    for (int i = 0; i < p.currentMeshes.size(); i++)
-    {
-      
-      settings.addTag("mesh");
-      settings.pushTag("mesh", i);
-      
-      for (int j = 0; j < p.currentMeshes[i].points.size(); j++)
-      {
-        settings.addTag("point");
-        settings.pushTag("point", j);
-        settings.addValue("index", j);
-        settings.addValue("x", p.currentMeshes[i].points[j].x + p.currentMeshes[i].fine[j].x);
-        settings.addValue("y", p.currentMeshes[i].points[j].y + p.currentMeshes[i].fine[j].y);
-        
-        settings.popTag();
-      }
-      settings.addValue("imgX", p.currentMeshes[i].imageX);
-      settings.addValue("imgY", p.currentMeshes[i].imageY);
-      settings.addValue("imgW", p.currentMeshes[i].imageW);
-      settings.addValue("imgH", p.currentMeshes[i].imageH);
-      settings.popTag();
-    }
+
+
+	string orientations[2] = { "wall", "ceiling" };
+	for (int o = 0; o < 2; o++) {
+		std::string orient = orientations[o];
+		settings.pushTag("orientation", o);
+		for (int i = 0; i < p.currentMeshes[o].size(); i++)
+		{
+
+			settings.addTag("mesh");
+			settings.pushTag("mesh", i);
+
+			for (int j = 0; j < p.currentMeshes[o][i].points.size(); j++)
+			{
+				settings.addTag("point");
+				settings.pushTag("point", j);
+				settings.addValue("index", j);
+				settings.addValue("x", p.currentMeshes[o][i].points[j].x + p.currentMeshes[o][i].fine[j].x);
+				settings.addValue("y", p.currentMeshes[o][i].points[j].y + p.currentMeshes[o][i].fine[j].y);
+
+				settings.popTag();
+			}
+			settings.addValue("imgX", p.currentMeshes[o][i].imageX);
+			settings.addValue("imgY", p.currentMeshes[o][i].imageY);
+			settings.addValue("imgW", p.currentMeshes[o][i].imageW);
+			settings.addValue("imgH", p.currentMeshes[o][i].imageH);
+			settings.popTag();
+		}
+
+
+		settings.popTag();
+	}
     settings.popTag();
   }
   settings.popTag();
@@ -66,7 +74,11 @@ void Presets::saveSettings()
 void Presets::createNew()
 {
   std::cout << "no file, creating new" << endl;
-  vector<ProjectionMesh> meshes;
+  vector<vector<ProjectionMesh>> meshes;
+
+  vector<ProjectionMesh> c1;
+  vector<ProjectionMesh> c2;
+
   ProjectionMesh m;
   m.setup(
           100, 100,
@@ -74,8 +86,11 @@ void Presets::createNew()
           ofGetWidth() - 100, ofGetHeight() - 100,
           100, ofGetHeight() - 100);
   
-  meshes.push_back(m);
+  c1.push_back(m);
+  c2.push_back(m);
   
+  meshes.push_back(c1);
+  meshes.push_back(c2);
   Preset p;
   
   p.setup(meshes);
@@ -94,44 +109,56 @@ void Presets::loadSettings()
     {
       settings.pushTag("preset", i);
       Preset p;
-      vector<ProjectionMesh> meshes;
-      
-      int numMeshes = settings.getNumTags("mesh");
-      for (int j = 0; j < numMeshes; j++)
-      {
-        settings.pushTag("mesh", j);
-        ProjectionMesh m;
-        
-        int numPoints = settings.getNumTags("point");
-        for (int k = 0; k < numPoints; k++)
-        {
-          settings.pushTag("point", k);
-          ofPoint po;
-          po.x = settings.getValue("x", 0);
-          po.y = settings.getValue("y", 0);
-          
-          std::cout << "pushing back points" << endl;
-          m.points.push_back(po);
-          m.fine.push_back(ofPoint(0, 0));
-          settings.popTag();
-        }
-        m.imageX = settings.getValue("imgX", 0);
-        m.imageY = settings.getValue("imgY", 0);
-        m.imageW = settings.getValue("imgW", 0);
-        m.imageH = settings.getValue("imgH", 0);
-        
-        std::cout << "pushing back meshes" << endl;
-        meshes.push_back(m);
-        settings.popTag();
-      }
-      p.setup(meshes);
-      std::cout << "pushing back preset" << endl;
-      presetsTemp.push_back(p);
-      settings.popTag();
+
+
+	  vector<vector<ProjectionMesh>> fmeshes;
+
+	  int numOrients = settings.getNumTags("orientation");
+	  for (int o = 0; o < numOrients; o++) {
+		  settings.pushTag("orientation", o);
+
+		  vector<ProjectionMesh> meshes;
+		  int numMeshes = settings.getNumTags("mesh");
+		  for (int j = 0; j < numMeshes; j++)
+		  {
+			  settings.pushTag("mesh", j);
+			  ProjectionMesh m;
+
+			  int numPoints = settings.getNumTags("point");
+			  for (int k = 0; k < numPoints; k++)
+			  {
+				  settings.pushTag("point", k);
+				  ofPoint po;
+				  po.x = settings.getValue("x", 0);
+				  po.y = settings.getValue("y", 0);
+
+				  std::cout << "pushing back points" << po.x << ", " << po.y << endl;
+				  m.points.push_back(po);
+				  m.fine.push_back(ofPoint(0, 0));
+				  settings.popTag(); // point
+			  }
+			  m.imageX = settings.getValue("imgX", 0);
+			  m.imageY = settings.getValue("imgY", 0);
+			  m.imageW = settings.getValue("imgW", 0);
+			  m.imageH = settings.getValue("imgH", 0);
+
+			  std::cout << "pushing back meshes" << endl;
+			  meshes.push_back(m);
+			  settings.popTag(); // mesh
+		  }
+		  fmeshes.push_back(meshes);
+		  settings.popTag(); // orient
+
+	  }
+
+		p.setup(fmeshes);
+		std::cout << "pushing back preset" << endl;
+		presetsTemp.push_back(p);
+		settings.popTag(); // preset
     }
     
     std::cout << "pushing back presets" << endl;
-    settings.popTag();
+    settings.popTag();// presets
     presets = presetsTemp;
   }
   else

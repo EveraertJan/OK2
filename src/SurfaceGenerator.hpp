@@ -41,7 +41,7 @@ public:
   vector<std::string> envSources;
   int curSource = 0;
   
-  ofVideoPlayer backVid;
+  ofxHapPlayer backVid;
   ofxHapPlayer interactionVid;
   ofxHapPlayer midVid;
 

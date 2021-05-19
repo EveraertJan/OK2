@@ -16,8 +16,10 @@ void ofApp::setup()
 //--------------------------------------------------------------
 void ofApp::update()
 {
-  surfaceGenerator.update(DISPLAY_INTERACTION);
-  presets.update();
+	if (DISPLAY_PROJ) {
+		surfaceGenerator.update(DISPLAY_INTERACTION);
+		presets.update();
+	}
   while (receiver.hasWaitingMessages())
   {
     ofxOscMessage msg;

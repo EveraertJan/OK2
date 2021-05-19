@@ -96,16 +96,15 @@ void SurfaceGenerator::loadNewSource()
   std::string orient = orientations[currentOrient];
   std::string pre = envSources[curSource];
   
-  std::cout << pre << endl;
   
-  backVid.load("video/"+pre+"/"+orient+"/background.mp4");
+  backVid.load("video/"+pre+"/"+orient+"/background.mov");
   midVid.load("video/"+pre+"/" + orient + "/mid.mov");  
   interactionVid.load("video/"+pre+"/" + orient + "/interaction.mov");
   
   
   backVid.play();
   midVid.play();
-  interactionVid.play();
+  // interactionVid.play();
   interactionVid.setLoopState(OF_LOOP_NONE);
 }
 
