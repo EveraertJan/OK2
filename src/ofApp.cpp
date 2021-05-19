@@ -31,14 +31,12 @@ void ofApp::update()
 //--------------------------------------------------------------
 void ofApp::draw()
 {
-  // draw whatever
-  
-  surfaceGenerator.generate(DEBUG_MODE, ORIENT);
-  
-  ofClear(0, 0, 0);
-  presets.draw(surfaceGenerator.wall_FBO, DEBUG_MODE, ORIENT);
+	ofClear(0, 0, 0);
+	if (DISPLAY_PROJ) {
+		surfaceGenerator.generate(DEBUG_MODE, ORIENT);
 
-  // presets.draw(surfaceGenerator, DISPLAY_INTERACTION, DISPLAY_LOUIS);
+		presets.draw(surfaceGenerator.wall_FBO, DEBUG_MODE, ORIENT);
+	}
 }
 
 //--------------------------------------------------------------
@@ -81,7 +79,7 @@ void ofApp::keyPressed(int key)
     case '9':
     case 'm':
       // MUTE = !MUTE;
-      // if (MUTE)
+	  // if (MUTE)
       // {
       //   sound.setVolume(0);
       // }
@@ -89,6 +87,7 @@ void ofApp::keyPressed(int key)
       // {
       //   sound.setVolume(5);
       // }
+		DISPLAY_PROJ = !DISPLAY_PROJ;
       break;
     case '+':
     case 'w':

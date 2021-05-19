@@ -32,7 +32,8 @@ public:
   SurfaceGenerator surfaceGenerator;
   
   Presets presets;
-  
+
+  bool DISPLAY_PROJ = true;
   bool DISPLAY_MASCOTTE = false;
   bool DISPLAY_INTERACTION = false;
   bool DEBUG_MODE = false;
