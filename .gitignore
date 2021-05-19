@@ -3,3 +3,12 @@
 /src/settings.hpp
 
 /bin/data/video
+/obj
+/bin
+/addons
+/.vs
+
+.DS_Store
+
+OK2.*
+/OK2.*/

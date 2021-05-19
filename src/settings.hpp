@@ -8,4 +8,7 @@ const int _framerate = 24;
 
 const int _height = 1400;
 const int _width = 900;
+
+const int WALL = 1;
+const int CEILING = 0;
 #endif settings_hpp

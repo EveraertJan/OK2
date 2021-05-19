@@ -51,8 +51,13 @@ void SurfaceGenerator::update(bool INTERACTION)
     interactionVid.play();
   }
 }
-void SurfaceGenerator::generate( bool DEBUG)
+void SurfaceGenerator::generate( bool DEBUG_MODE, int ORIENT)
 {
+
+	if (ORIENT != currentOrient) {
+		currentOrient = ORIENT;
+		loadNewSource();
+	}
   // // prep walls
   wall_FBO.begin();
   ofEnableAlphaBlending();
@@ -87,16 +92,15 @@ void SurfaceGenerator::loadNewSource()
   midVid.close();
   interactionVid.close();
   
+  string orientations[2] = { "wall", "ceiling" };
+  std::string orient = orientations[currentOrient];
   std::string pre = envSources[curSource];
   
   std::cout << pre << endl;
   
-  backVid.load("video/"+pre+"/background.mp4");
-  if(pre != "space") {
-    midVid.load("video/"+pre+"/mid.mov");
-  }
-  
-  interactionVid.load("video/"+pre+"/interaction.mov");
+  backVid.load("video/"+pre+"/"+orient+"/background.mp4");
+  midVid.load("video/"+pre+"/" + orient + "/mid.mov");  
+  interactionVid.load("video/"+pre+"/" + orient + "/interaction.mov");
   
   
   backVid.play();

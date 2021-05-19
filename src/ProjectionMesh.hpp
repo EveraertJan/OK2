@@ -18,7 +18,7 @@ class ProjectionMesh
 public:
   void setup(float x1, float y1, float x2, float y2, float x3, float y3, float x4, float y4);
   void update();
-  void draw(ofFbo surface, bool debug);
+  void draw(ofFbo surface, bool DEBUG_MODE);
   void handleOSC(ofxOscMessage msg);
   
   // ofPoint p1;

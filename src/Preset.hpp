@@ -23,7 +23,7 @@ class Preset
 public:
   void setup(vector<ProjectionMesh> meshes);
   void update();
-  void draw(ofFbo surface, bool DEBUG);
+  void draw(ofFbo surface, bool DEBUG_MODE, int ORIENT);
   void handleOSC(ofxOscMessage msg);
 
   vector<ProjectionMesh> currentMeshes;

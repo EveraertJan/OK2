@@ -25,7 +25,7 @@ public:
   
   void update();
   
-  void draw(ofFbo surface, bool DEBUG);
+  void draw(ofFbo surface, bool DEBUG_MODE, int ORIENT);
   
   void handleOSC(ofxOscMessage msg);
   void createNew();
@@ -42,7 +42,6 @@ public:
   int currentPreset;
   vector<Preset> presets;
   
-  bool DEBUG = true;
 };
 
 #endif /* PresetClass_hpp */

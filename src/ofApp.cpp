@@ -9,7 +9,6 @@ void ofApp::setup()
   sender.setup(_ip, _sendport);
   receiver.setup(_recport);
   
-  surfaceGenerator = new SurfaceGenerator();
   
   presets.setup(sender);
 }
@@ -17,7 +16,7 @@ void ofApp::setup()
 //--------------------------------------------------------------
 void ofApp::update()
 {
-  surfaceGenerator->update(DISPLAY_INTERACTION);
+  surfaceGenerator.update(DISPLAY_INTERACTION);
   presets.update();
   while (receiver.hasWaitingMessages())
   {
@@ -34,10 +33,11 @@ void ofApp::draw()
 {
   // draw whatever
   
-  surfaceGenerator->generate(DEBUG_MODE);
+  surfaceGenerator.generate(DEBUG_MODE, ORIENT);
   
   ofClear(0, 0, 0);
-  presets.draw(surfaceGenerator->wall_FBO, DEBUG_MODE);
+  presets.draw(surfaceGenerator.wall_FBO, DEBUG_MODE, ORIENT);
+
   // presets.draw(surfaceGenerator, DISPLAY_INTERACTION, DISPLAY_LOUIS);
 }
 
@@ -56,7 +56,10 @@ void ofApp::keyPressed(int key)
       presets.nextPreset();
       break;
     case '3':
-      // DISPLAY_MODE = 3;
+		ORIENT++;
+		if (ORIENT == 2) {
+			ORIENT = 0;
+		}
       break;
     case '4':
     case 'l':
@@ -89,11 +92,11 @@ void ofApp::keyPressed(int key)
       break;
     case '+':
     case 'w':
-      surfaceGenerator->nextSource();
+      surfaceGenerator.nextSource();
       break;
     case '-':
     case 's':
-      surfaceGenerator->prevSource();
+      surfaceGenerator.prevSource();
       break;
     case '.':
       // if (sound.isPlaying())

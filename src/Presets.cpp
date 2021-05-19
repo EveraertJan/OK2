@@ -16,12 +16,12 @@ void Presets::update()
   // presets[currentPreset].update();
 }
 
-void Presets::draw(ofFbo surface, bool DEBUG)
+void Presets::draw(ofFbo surface, bool DEBUG_MODE, int ORIENT)
 {
   // draw cur preset
   if (presets.size() > 0)
   {
-    presets[currentPreset].draw(surface, DEBUG);
+    presets[currentPreset].draw(surface, DEBUG_MODE, ORIENT);
   }
 }
 void Presets::saveSettings()

@@ -16,15 +16,15 @@ void Preset::update()
 {
 }
 
-void Preset::draw(ofFbo surface, bool DEBUG)
+void Preset::draw(ofFbo surface, bool DEBUG_MODE, int ORIENT)
 {
   if (currentMeshes.size() > 0)
   {
     for (int i = 0; i < currentMeshes.size(); i++)
     {
-      if (DEBUG && i == curMesh)
+      if (DEBUG_MODE && i == curMesh)
       {
-        currentMeshes[i].draw(surface, DEBUG);
+		  currentMeshes[i].draw(surface, DEBUG_MODE);
       }
       else
       {

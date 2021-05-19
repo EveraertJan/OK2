@@ -13,7 +13,6 @@
 #include "ofxXmlSettings.h"
 #include "ofxHapPlayer.h"
 #include "ofxOsc.h"
-#include "ofxGif.h"
 
 #include "settings.hpp"
 
@@ -23,7 +22,7 @@ class SurfaceGenerator
 public:
   SurfaceGenerator();
   void update(bool INTERACTION);
-  void generate(bool DEBUG);
+  void generate(bool DEBUG_MODE, int ORIENT);
   void draw(int drawWidth, int drawHeight, int position, int subX, int subY, int subWidth, int subHeight, bool INTERACTION, bool LOUIS);
   void loadNewSource();
   void handleOSC(ofxOscMessage msg);
@@ -45,6 +44,8 @@ public:
   ofVideoPlayer backVid;
   ofxHapPlayer interactionVid;
   ofxHapPlayer midVid;
+
+  int currentOrient = 0;
   
 };
 

@@ -1,4 +1,3 @@
-ofxGif
 ofxGui
 ofxHapPlayer
 ofxOsc

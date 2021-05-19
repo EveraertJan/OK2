@@ -4,6 +4,7 @@
 #include "SurfaceGenerator.hpp"
 #include "ofxOsc.h"
 #include "Presets.hpp"
+#include "settings.hpp"
 
 class ofApp : public ofBaseApp
 {
@@ -28,11 +29,12 @@ public:
   ofxOscSender sender;
   ofxOscReceiver receiver;
   
-  SurfaceGenerator *surfaceGenerator;
+  SurfaceGenerator surfaceGenerator;
   
   Presets presets;
   
   bool DISPLAY_MASCOTTE = false;
   bool DISPLAY_INTERACTION = false;
   bool DEBUG_MODE = false;
+  int ORIENT = WALL;
 };

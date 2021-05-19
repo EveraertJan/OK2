@@ -24,7 +24,7 @@ void ProjectionMesh::setup(float x1, float y1, float x2, float y2, float x3, flo
   // coarseMulti = ofGetWindowWidth() / 200;
 }
 
-void ProjectionMesh::draw(ofFbo surface, bool DEBUG)
+void ProjectionMesh::draw(ofFbo surface, bool DEBUG_MODE)
 {
   baseW = surface.getWidth();
   baseH = surface.getHeight();
@@ -48,7 +48,7 @@ void ProjectionMesh::draw(ofFbo surface, bool DEBUG)
   surface.getTextureReference().unbind();
   ofFill();
   ofSetColor(255, 255, 0, 255);
-  if (DEBUG)
+  if (DEBUG_MODE)
   {
     
     for (int i = 0; i < points.size(); i++)
