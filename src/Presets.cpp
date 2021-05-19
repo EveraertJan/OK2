@@ -39,7 +39,9 @@ void Presets::saveSettings()
 	string orientations[2] = { "wall", "ceiling" };
 	for (int o = 0; o < 2; o++) {
 		std::string orient = orientations[o];
+		settings.addTag("orientation");
 		settings.pushTag("orientation", o);
+
 		for (int i = 0; i < p.currentMeshes[o].size(); i++)
 		{
 

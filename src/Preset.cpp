@@ -37,7 +37,7 @@ void Preset::draw(ofFbo surface, bool DEBUG_MODE, int ORIENT)
 }
 void Preset::handleOSC(ofxOscMessage msg)
 {
-	vector<ProjectionMesh> c = currentMeshes[curOrient];
+	vector<ProjectionMesh> *c = &currentMeshes[curOrient];
   string a = msg.getAddress();
   // std::cout << a << endl;
   
@@ -50,15 +50,15 @@ void Preset::handleOSC(ofxOscMessage msg)
             ofGetWidth() - 100, 100,
             ofGetWidth() - 100, ofGetHeight() - 100,
             100, ofGetHeight() - 100);
-    c.push_back(m);
+    c->push_back(m);
     curMesh++;
   };
   if (a == "/preset/mesh/remove")
   {
     std::cout << "remove mesh" << endl;
-    if (c.size() > 0)
+    if (c->size() > 0)
     {
-      c.erase(c.begin() + curMesh);
+      c->erase(c->begin() + curMesh);
       curMesh--;
     }
   };
@@ -68,20 +68,20 @@ void Preset::handleOSC(ofxOscMessage msg)
     curMesh--;
     if (curMesh < 0)
     {
-      curMesh = c.size() - 1;
+      curMesh = c->size() - 1;
     }
     std::cout << "prev mesh" << curMesh << endl;
   };
   if (a == "/preset/mesh/next")
   {
     curMesh++;
-    if (curMesh > c.size() - 1)
+    if (curMesh > c->size() - 1)
     {
       curMesh = 0;
     }
     std::cout << "next mesh" << curMesh << endl;
   };
-  c[curMesh].handleOSC(msg);
+  c->at(curMesh).handleOSC(msg);
   
   // if (a == "/keystoneV")
   // {

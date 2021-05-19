@@ -31,8 +31,8 @@ public:
   
   int imageW = 1;
   int imageH = 1;
-  int baseW = 1024;
-  int baseH = 630;
+  int baseW = 1480;
+  int baseH = 1400;
   int imageX = 0;
   int imageY = 0;
   
