@@ -39,7 +39,7 @@ public:
   int WIDTH = _width;
   
   vector<std::string> envSources;
-  int curSource = 0;
+  int curSource = 1;
   
   ofxHapPlayer backVid;
   ofxHapPlayer interactionVid;

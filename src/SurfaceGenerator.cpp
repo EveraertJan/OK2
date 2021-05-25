@@ -53,9 +53,9 @@ void SurfaceGenerator::update(bool INTERACTION)
 }
 void SurfaceGenerator::generate( bool DEBUG_MODE, int ORIENT)
 {
-
 	if (ORIENT != currentOrient) {
 		currentOrient = ORIENT;
+	//	std::cout << ORIENT << endl;
 		loadNewSource();
 	}
   // // prep walls
@@ -93,13 +93,15 @@ void SurfaceGenerator::loadNewSource()
   interactionVid.close();
   
   string orientations[2] = { "wall", "ceiling" };
-  std::string orient = orientations[currentOrient];
+  std::string orientation = orientations[currentOrient];
   std::string pre = envSources[curSource];
+
+  std::cout << orientation << "," << pre << endl;
   
-  
-  backVid.load("video/"+pre+"/"+orient+"/background.mov");
-  midVid.load("video/"+pre+"/" + orient + "/mid.mov");  
-  interactionVid.load("video/"+pre+"/" + orient + "/interaction.mov");
+  std::cout << "video/" + pre + "/" + orientation + "/background.mov" << endl;
+  backVid.load("video/"+pre+"/"+ orientation +"/background.mov");
+  midVid.load("video/"+pre+"/" + orientation + "/mid.mov");
+  interactionVid.load("video/"+pre+"/" + orientation + "/interaction.mov");
   
   
   backVid.play();

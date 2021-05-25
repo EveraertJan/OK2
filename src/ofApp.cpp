@@ -24,7 +24,7 @@ void ofApp::update()
   {
     ofxOscMessage msg;
     receiver.getNextMessage(&msg);
-    // std::cout << msg << endl;
+     std::cout << msg << endl;
     
     presets.handleOSC(msg);
   }
@@ -91,14 +91,7 @@ void ofApp::keyPressed(int key)
       // }
 		DISPLAY_PROJ = !DISPLAY_PROJ;
       break;
-    case '+':
-    case 'w':
-      surfaceGenerator.nextSource();
-      break;
-    case '-':
-    case 's':
-      surfaceGenerator.prevSource();
-      break;
+   
     case '.':
       // if (sound.isPlaying())
       // {
@@ -128,6 +121,14 @@ void ofApp::keyReleased(int key)
       // DISPLAY_LOUIS = false;
       DISPLAY_INTERACTION = false;
       break;
+	case '+':
+	case 'w':
+		surfaceGenerator.nextSource();
+		break;
+	case '-':
+	case 's':
+		surfaceGenerator.prevSource();
+		break;
     default:
       // std::cout << "wrong command used" << key;
       break;
