@@ -100,7 +100,7 @@ void ofApp::keyPressed(int key)
        }
        else
        {
-         sound.setVolume(5);
+         sound.setVolume(3);
        }
       break;
    

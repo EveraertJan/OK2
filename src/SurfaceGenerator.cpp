@@ -62,16 +62,29 @@ void SurfaceGenerator::generate( bool DEBUG_MODE, int ORIENT)
   wall_FBO.begin();
   ofEnableAlphaBlending();
   ofClear(0, 0, 0, 0);
-  
+
   ofSetColor(255, 255, 255, 255);
-  if(backVid.isLoaded()) {
-    backVid.draw(0, 0, WIDTH, HEIGHT);
-  }
-  if( interactionVid.isLoaded()) {
-    interactionVid.draw(0, 0, WIDTH, HEIGHT);
-  }
-  if( midVid.isLoaded()) {
-    midVid.draw(0, 0, WIDTH, HEIGHT);
+  if(curSource == 0) {
+    if(backVid.isLoaded()) {
+      backVid.draw(0, 0, WIDTH, HEIGHT);
+    }
+    if( interactionVid.isLoaded()) {
+      interactionVid.draw(0, 0, WIDTH, HEIGHT);
+    }
+    if( midVid.isLoaded()) {
+      midVid.draw(0, 0, WIDTH, HEIGHT);
+    }
+  } else {
+    if(backVid.isLoaded()) {
+      backVid.draw(0, 0, WIDTH, HEIGHT);
+    }
+    if( midVid.isLoaded()) {
+      midVid.draw(0, 0, WIDTH, HEIGHT);
+    }
+    if( interactionVid.isLoaded()) {
+      interactionVid.draw(0, 0, WIDTH, HEIGHT);
+    }
+    
   }
   
   ofDisableAlphaBlending();
@@ -95,18 +108,15 @@ void SurfaceGenerator::loadNewSource()
   string orientations[2] = { "wall", "ceiling" };
   std::string orientation = orientations[currentOrient];
   std::string pre = envSources[curSource];
-
-  std::cout << orientation << "," << pre << endl;
   
-  std::cout << "video/" + pre + "/" + orientation + "/background.mov" << endl;
   backVid.load("video/"+pre+"/"+ orientation +"/background.mov");
   midVid.load("video/"+pre+"/" + orientation + "/mid.mov");
-  interactionVid.load("video/"+pre+"/" + orientation + "/interaction.mov");
+  interactionVid.load("video/" + pre + "/" + orientation + "/interaction.mov");
   
   
   backVid.play();
   midVid.play();
-  // interactionVid.play();
+  interactionVid.play();
   interactionVid.setLoopState(OF_LOOP_NONE);
 }
 
