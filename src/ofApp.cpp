@@ -11,6 +11,15 @@ void ofApp::setup()
   
   
   presets.setup(sender);
+  
+  sound.load("sounds/back.mp3");
+  sound.play();
+  
+  
+  
+  std::string fSource = surfaceGenerator.envSources[surfaceGenerator.curSource];
+  interactionSound.load("sounds/" + fSource + ".mp3");
+  interactionSound.stop();
 }
 
 //--------------------------------------------------------------
@@ -65,6 +74,9 @@ void ofApp::keyPressed(int key)
     case 'l':
       DISPLAY_MASCOTTE = true;
       DISPLAY_INTERACTION = true;
+      interactionSound.play();
+      interactionSound.setLoop(false);
+      
       break;
     case '5':
     case 'i':
@@ -77,30 +89,31 @@ void ofApp::keyPressed(int key)
     case '8':
     case 'c':
       // DISPLAY_CAM = !DISPLAY_CAM;
+      DISPLAY_PROJ = !DISPLAY_PROJ;
       break;
     case '9':
     case 'm':
-      // MUTE = !MUTE;
-	  // if (MUTE)
-      // {
-      //   sound.setVolume(0);
-      // }
-      // else
-      // {
-      //   sound.setVolume(5);
-      // }
-		DISPLAY_PROJ = !DISPLAY_PROJ;
+       MUTE = !MUTE;
+       if (MUTE)
+       {
+         sound.setVolume(0);
+       }
+       else
+       {
+         sound.setVolume(5);
+       }
       break;
    
     case '.':
-      // if (sound.isPlaying())
-      // {
-      //   sound.stop();
-      // }
-      // else
-      // {
-      //   sound.play();
-      // }
+    case 'q':
+       if (sound.isPlaying())
+       {
+         sound.stop();
+       }
+       else
+       {
+         sound.play();
+       }
       break;
     default:
       // std::cout << "wrong command used" << key;
@@ -121,15 +134,21 @@ void ofApp::keyReleased(int key)
       // DISPLAY_LOUIS = false;
       DISPLAY_INTERACTION = false;
       break;
-	case '+':
-	case 'w':
-		surfaceGenerator.nextSource();
-		break;
-	case '-':
-	case 's':
-		surfaceGenerator.prevSource();
-		break;
-    default:
+	case '+': {
+    surfaceGenerator.nextSource();
+    std::string iSource = surfaceGenerator.envSources[surfaceGenerator.curSource];
+    interactionSound.load("sounds/" + iSource + ".mp3");
+    interactionSound.stop();
+    break;
+    }
+  case '-': {
+    surfaceGenerator.prevSource();
+    std::string oSource = surfaceGenerator.envSources[surfaceGenerator.curSource];
+    interactionSound.load("sounds/"+oSource+".mp3");
+    interactionSound.stop();
+    break;
+  }
+  default:
       // std::cout << "wrong command used" << key;
       break;
   }

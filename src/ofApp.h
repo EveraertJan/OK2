@@ -31,11 +31,16 @@ public:
   
   SurfaceGenerator surfaceGenerator;
   
+  ofSoundPlayer sound;
+  ofSoundPlayer interactionSound;
+  
   Presets presets;
 
   bool DISPLAY_PROJ = true;
   bool DISPLAY_MASCOTTE = false;
   bool DISPLAY_INTERACTION = false;
   bool DEBUG_MODE = false;
+  bool MUTE = false;
+
   int ORIENT = WALL;
 };

@@ -12,3 +12,13 @@
 
 OK2.*
 /OK2.*/
+bin/data/.DS_Store
+bin/OK2Debug.app/Contents/MacOS/OK2Debug
+OK2.xcodeproj/project.xcworkspace/xcuserdata/janeveraert.xcuserdatad/UserInterfaceState.xcuserstate
+config.make
+Makefile
+*.plist
+Project.xcconfig
+bin/data/.DS_Store
+bin/OK2Debug.app/Contents/MacOS/OK2Debug
+OK2.xcodeproj/project.xcworkspace/xcuserdata/janeveraert.xcuserdatad/UserInterfaceState.xcuserstate
