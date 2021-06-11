@@ -42,5 +42,9 @@ public:
   bool DEBUG_MODE = false;
   bool MUTE = false;
 
+  float vol = 2;
+  float soundIncr = 0.2;
+  int volStart = 0;
+
   int ORIENT = WALL;
 };

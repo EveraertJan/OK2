@@ -1,30 +1,31 @@
 <presets>
     <preset>
+	<handle>OK8</handle>
         <orientation>
             <mesh>
                 <point>
                     <index>0</index>
-                    <x>0.000000000</x>
-                    <y>0.000000000</y>
+                    <x>256.000000000</x>
+                    <y>405.000000000</y>
                 </point>
                 <point>
                     <index>1</index>
-                    <x>1298.000000000</x>
-                    <y>0.000000000</y>
+                    <x>1062.000000000</x>
+                    <y>58.000000000</y>
                 </point>
                 <point>
                     <index>2</index>
-                    <x>1274.000000000</x>
-                    <y>792.000000000</y>
+                    <x>966.000000000</x>
+                    <y>801.000000000</y>
                 </point>
                 <point>
                     <index>3</index>
-                    <x>0.000000000</x>
-                    <y>800.000000000</y>
+                    <x>315.000000000</x>
+                    <y>784.000000000</y>
                 </point>
                 <imgX>0</imgX>
                 <imgY>0</imgY>
-                <imgW>796</imgW>
+                <imgW>789</imgW>
                 <imgH>1269</imgH>
             </mesh>
         </orientation>
@@ -32,58 +33,59 @@
             <mesh>
                 <point>
                     <index>0</index>
-                    <x>-4.385963440</x>
-                    <y>428.070190430</y>
+                    <x>254.000000000</x>
+                    <y>406.000000000</y>
                 </point>
                 <point>
                     <index>1</index>
-                    <x>1195.906372070</x>
-                    <y>10.526313782</y>
+                    <x>1060.000000000</x>
+                    <y>56.000000000</y>
                 </point>
                 <point>
                     <index>2</index>
-                    <x>899.415283203</x>
-                    <y>735.380065918</y>
+                    <x>959.000000000</x>
+                    <y>831.000000000</y>
                 </point>
                 <point>
                     <index>3</index>
-                    <x>398.830413818</x>
-                    <y>785.380065918</y>
+                    <x>316.000000000</x>
+                    <y>777.000000000</y>
                 </point>
                 <imgX>0</imgX>
                 <imgY>0</imgY>
-                <imgW>746</imgW>
-                <imgH>1400</imgH>
+                <imgW>787</imgW>
+                <imgH>1260</imgH>
             </mesh>
         </orientation>
     </preset>
     <preset>
+	<handle>STD</handle>
         <orientation>
             <mesh>
                 <point>
                     <index>0</index>
-                    <x>163.000000000</x>
-                    <y>-32.000000000</y>
+                    <x>100.000000000</x>
+                    <y>100.000000000</y>
                 </point>
                 <point>
                     <index>1</index>
-                    <x>933.000000000</x>
-                    <y>150.000000000</y>
+                    <x>1180.000000000</x>
+                    <y>100.000000000</y>
                 </point>
                 <point>
                     <index>2</index>
-                    <x>869.000000000</x>
-                    <y>787.000000000</y>
+                    <x>1180.000000000</x>
+                    <y>700.000000000</y>
                 </point>
                 <point>
                     <index>3</index>
-                    <x>324.000000000</x>
-                    <y>864.000000000</y>
+                    <x>100.000000000</x>
+                    <y>700.000000000</y>
                 </point>
-                <imgX>250</imgX>
+                <imgX>0</imgX>
                 <imgY>0</imgY>
-                <imgW>733</imgW>
-                <imgH>1252</imgH>
+                <imgW>1024</imgW>
+                <imgH>600</imgH>
             </mesh>
         </orientation>
         <orientation>
@@ -112,6 +114,445 @@
                 <imgY>0</imgY>
                 <imgW>1024</imgW>
                 <imgH>600</imgH>
+            </mesh>
+        </orientation>
+    </preset>
+    <preset>
+	<handle>OK1</handle>
+        <orientation>
+            <mesh>
+                <point>
+                    <index>0</index>
+                    <x>529.000000000</x>
+                    <y>45.000000000</y>
+                </point>
+                <point>
+                    <index>1</index>
+                    <x>1234.000000000</x>
+                    <y>368.000000000</y>
+                </point>
+                <point>
+                    <index>2</index>
+                    <x>1152.000000000</x>
+                    <y>753.000000000</y>
+                </point>
+                <point>
+                    <index>3</index>
+                    <x>578.000000000</x>
+                    <y>935.000000000</y>
+                </point>
+                <imgX>0</imgX>
+                <imgY>0</imgY>
+                <imgW>755</imgW>
+                <imgH>1295</imgH>
+            </mesh>
+        </orientation>
+        <orientation>
+            <mesh>
+                <point>
+                    <index>0</index>
+                    <x>531.000000000</x>
+                    <y>47.000000000</y>
+                </point>
+                <point>
+                    <index>1</index>
+                    <x>1237.000000000</x>
+                    <y>369.000000000</y>
+                </point>
+                <point>
+                    <index>2</index>
+                    <x>1135.000000000</x>
+                    <y>878.000000000</y>
+                </point>
+                <point>
+                    <index>3</index>
+                    <x>586.000000000</x>
+                    <y>1022.000000000</y>
+                </point>
+                <imgX>0</imgX>
+                <imgY>0</imgY>
+                <imgW>640</imgW>
+                <imgH>1211</imgH>
+            </mesh>
+        </orientation>
+    </preset>
+    <preset>
+	<handle>OK2</handle>
+        <orientation>
+            <mesh>
+                <point>
+                    <index>0</index>
+                    <x>343.859619141</x>
+                    <y>327.777801514</y>
+                </point>
+                <point>
+                    <index>1</index>
+                    <x>1166.666625977</x>
+                    <y>388.596496582</y>
+                </point>
+                <point>
+                    <index>2</index>
+                    <x>1103.508789062</x>
+                    <y>767.543884277</y>
+                </point>
+                <point>
+                    <index>3</index>
+                    <x>403.508789062</x>
+                    <y>803.508789062</y>
+                </point>
+                <imgX>0</imgX>
+                <imgY>0</imgY>
+                <imgW>740</imgW>
+                <imgH>1273</imgH>
+            </mesh>
+        </orientation>
+        <orientation>
+            <mesh>
+                <point>
+                    <index>0</index>
+                    <x>342.397674561</x>
+                    <y>328.362548828</y>
+                </point>
+                <point>
+                    <index>1</index>
+                    <x>1168.128662109</x>
+                    <y>387.134521484</y>
+                </point>
+                <point>
+                    <index>2</index>
+                    <x>1096.374267578</x>
+                    <y>765.789428711</y>
+                </point>
+                <point>
+                    <index>3</index>
+                    <x>403.216430664</x>
+                    <y>807.017578125</y>
+                </point>
+                <imgX>0</imgX>
+                <imgY>0</imgY>
+                <imgW>791</imgW>
+                <imgH>1199</imgH>
+            </mesh>
+        </orientation>
+    </preset>
+    <preset>
+	<handle>OK3</handle>
+        <orientation>
+            <mesh>
+                <point>
+                    <index>0</index>
+                    <x>1.000000000</x>
+                    <y>64.000000000</y>
+                </point>
+                <point>
+                    <index>1</index>
+                    <x>1219.000000000</x>
+                    <y>324.000000000</y>
+                </point>
+                <point>
+                    <index>2</index>
+                    <x>1130.000000000</x>
+                    <y>777.000000000</y>
+                </point>
+                <point>
+                    <index>3</index>
+                    <x>186.000000000</x>
+                    <y>859.000000000</y>
+                </point>
+                <imgX>0</imgX>
+                <imgY>0</imgY>
+                <imgW>789</imgW>
+                <imgH>1281</imgH>
+            </mesh>
+        </orientation>
+        <orientation>
+            <mesh>
+                <point>
+                    <index>0</index>
+                    <x>0.000000000</x>
+                    <y>66.000000000</y>
+                </point>
+                <point>
+                    <index>1</index>
+                    <x>1209.000000000</x>
+                    <y>328.000000000</y>
+                </point>
+                <point>
+                    <index>2</index>
+                    <x>1123.000000000</x>
+                    <y>778.000000000</y>
+                </point>
+                <point>
+                    <index>3</index>
+                    <x>181.000000000</x>
+                    <y>870.000000000</y>
+                </point>
+                <imgX>0</imgX>
+                <imgY>0</imgY>
+                <imgW>809</imgW>
+                <imgH>1271</imgH>
+            </mesh>
+        </orientation>
+    </preset>
+    <preset>
+	<handle>OK4</handle>
+        <orientation>
+            <mesh>
+                <point>
+                    <index>0</index>
+                    <x>466.000000000</x>
+                    <y>64.000000000</y>
+                </point>
+                <point>
+                    <index>1</index>
+                    <x>1234.000000000</x>
+                    <y>345.000000000</y>
+                </point>
+                <point>
+                    <index>2</index>
+                    <x>1140.000000000</x>
+                    <y>785.000000000</y>
+                </point>
+                <point>
+                    <index>3</index>
+                    <x>518.000000000</x>
+                    <y>859.000000000</y>
+                </point>
+                <imgX>0</imgX>
+                <imgY>0</imgY>
+                <imgW>783</imgW>
+                <imgH>1279</imgH>
+            </mesh>
+        </orientation>
+        <orientation>
+            <mesh>
+                <point>
+                    <index>0</index>
+                    <x>468.000000000</x>
+                    <y>65.000000000</y>
+                </point>
+                <point>
+                    <index>1</index>
+                    <x>1234.000000000</x>
+                    <y>343.000000000</y>
+                </point>
+                <point>
+                    <index>2</index>
+                    <x>1144.000000000</x>
+                    <y>787.000000000</y>
+                </point>
+                <point>
+                    <index>3</index>
+                    <x>523.000000000</x>
+                    <y>859.000000000</y>
+                </point>
+                <imgX>0</imgX>
+                <imgY>0</imgY>
+                <imgW>752</imgW>
+                <imgH>1262</imgH>
+            </mesh>
+        </orientation>
+    </preset>
+    <preset>
+	<handle>OK5</handle>
+        <orientation>
+            <mesh>
+                <point>
+                    <index>0</index>
+                    <x>190.000000000</x>
+                    <y>311.000000000</y>
+                </point>
+                <point>
+                    <index>1</index>
+                    <x>1083.000000000</x>
+                    <y>421.000000000</y>
+                </point>
+                <point>
+                    <index>2</index>
+                    <x>1034.000000000</x>
+                    <y>768.000000000</y>
+                </point>
+                <point>
+                    <index>3</index>
+                    <x>282.000000000</x>
+                    <y>804.000000000</y>
+                </point>
+                <imgX>0</imgX>
+                <imgY>94</imgY>
+                <imgW>765</imgW>
+                <imgH>1238</imgH>
+            </mesh>
+        </orientation>
+        <orientation>
+            <mesh>
+                <point>
+                    <index>0</index>
+                    <x>271.000000000</x>
+                    <y>338.000000000</y>
+                </point>
+                <point>
+                    <index>1</index>
+                    <x>1041.000000000</x>
+                    <y>432.000000000</y>
+                </point>
+                <point>
+                    <index>2</index>
+                    <x>992.000000000</x>
+                    <y>780.000000000</y>
+                </point>
+                <point>
+                    <index>3</index>
+                    <x>334.000000000</x>
+                    <y>793.000000000</y>
+                </point>
+                <imgX>0</imgX>
+                <imgY>0</imgY>
+                <imgW>778</imgW>
+                <imgH>1228</imgH>
+            </mesh>
+        </orientation>
+    </preset>
+    <preset>
+	<handle>OK6</handle>
+        <orientation>
+            <mesh>
+                <point>
+                    <index>0</index>
+                    <x>156.000000000</x>
+                    <y>319.000000000</y>
+                </point>
+                <point>
+                    <index>1</index>
+                    <x>1191.000000000</x>
+                    <y>406.000000000</y>
+                </point>
+                <point>
+                    <index>2</index>
+                    <x>1119.000000000</x>
+                    <y>770.000000000</y>
+                </point>
+                <point>
+                    <index>3</index>
+                    <x>250.000000000</x>
+                    <y>815.000000000</y>
+                </point>
+                <imgX>0</imgX>
+                <imgY>223</imgY>
+                <imgW>791</imgW>
+                <imgH>1277</imgH>
+            </mesh>
+        </orientation>
+        <orientation>
+            <mesh>
+                <point>
+                    <index>0</index>
+                    <x>170.000000000</x>
+                    <y>331.000000000</y>
+                </point>
+                <point>
+                    <index>1</index>
+                    <x>1200.000000000</x>
+                    <y>419.000000000</y>
+                </point>
+                <point>
+                    <index>2</index>
+                    <x>1125.000000000</x>
+                    <y>782.000000000</y>
+                </point>
+                <point>
+                    <index>3</index>
+                    <x>254.000000000</x>
+                    <y>820.000000000</y>
+                </point>
+                <imgX>0</imgX>
+                <imgY>0</imgY>
+                <imgW>750</imgW>
+                <imgH>1264</imgH>
+            </mesh>
+        </orientation>
+    </preset>
+    <preset>
+	<handle>OK7</handle>
+        <orientation>
+            <mesh>
+                <point>
+                    <index>0</index>
+                    <x>0.000000000</x>
+                    <y>0.000000000</y>
+                </point>
+                <point>
+                    <index>1</index>
+                    <x>574.000000000</x>
+                    <y>-16.000000000</y>
+                </point>
+                <point>
+                    <index>2</index>
+                    <x>606.000000000</x>
+                    <y>926.000000000</y>
+                </point>
+                <point>
+                    <index>3</index>
+                    <x>211.000000000</x>
+                    <y>961.000000000</y>
+                </point>
+                <imgX>0</imgX>
+                <imgY>0</imgY>
+                <imgW>227</imgW>
+                <imgH>1371</imgH>
+            </mesh>
+            <mesh>
+                <point>
+                    <index>0</index>
+                    <x>573.000000000</x>
+                    <y>0.000000000</y>
+                </point>
+                <point>
+                    <index>1</index>
+                    <x>946.000000000</x>
+                    <y>373.000000000</y>
+                </point>
+                <point>
+                    <index>2</index>
+                    <x>905.000000000</x>
+                    <y>775.000000000</y>
+                </point>
+                <point>
+                    <index>3</index>
+                    <x>599.000000000</x>
+                    <y>870.000000000</y>
+                </point>
+                <imgX>225</imgX>
+                <imgY>0</imgY>
+                <imgW>791</imgW>
+                <imgH>1279</imgH>
+            </mesh>
+        </orientation>
+        <orientation>
+            <mesh>
+                <point>
+                    <index>0</index>
+                    <x>0.000000000</x>
+                    <y>0.000000000</y>
+                </point>
+                <point>
+                    <index>1</index>
+                    <x>944.000000000</x>
+                    <y>373.000000000</y>
+                </point>
+                <point>
+                    <index>2</index>
+                    <x>907.000000000</x>
+                    <y>772.000000000</y>
+                </point>
+                <point>
+                    <index>3</index>
+                    <x>222.000000000</x>
+                    <y>1003.000000000</y>
+                </point>
+                <imgX>0</imgX>
+                <imgY>0</imgY>
+                <imgW>785</imgW>
+                <imgH>1269</imgH>
             </mesh>
         </orientation>
     </preset>

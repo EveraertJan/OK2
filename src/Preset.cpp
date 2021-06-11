@@ -1,6 +1,6 @@
 #include "./Preset.hpp"
 
-void Preset::setup(vector<vector<ProjectionMesh>> meshes)
+void Preset::setup(string h, vector<vector<ProjectionMesh>> meshes)
 {
   // ProjectionMesh m;
   // m.setup(
@@ -8,7 +8,7 @@ void Preset::setup(vector<vector<ProjectionMesh>> meshes)
   //     ofGetWidth() - 100, 100,
   //     ofGetWidth() - 100, ofGetHeight() - 100,
   //     100, ofGetHeight() - 100);
-  
+  handle = h;
   currentMeshes = meshes;
 }
 

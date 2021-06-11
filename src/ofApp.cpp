@@ -9,17 +9,18 @@ void ofApp::setup()
   sender.setup(_ip, _sendport);
   receiver.setup(_recport);
   
-  
   presets.setup(sender);
-  
   sound.load("sounds/back.mp3");
   sound.play();
-  
+  sound.setVolume(vol);
+  sound.setLoop(true);
   
   
   std::string fSource = surfaceGenerator.envSources[surfaceGenerator.curSource];
   interactionSound.load("sounds/" + fSource + ".mp3");
   interactionSound.stop();
+  interactionSound.setVolume(vol);
+
 }
 
 //--------------------------------------------------------------
@@ -48,6 +49,13 @@ void ofApp::draw()
 
 		presets.draw(surfaceGenerator.wall_FBO, DEBUG_MODE, ORIENT);
 	}
+
+	if (ofGetElapsedTimeMillis() - volStart < 2000) {
+		ofPushMatrix();
+		ofTranslate(ofGetWidth() / 2, ofGetHeight() / 2 + 20);
+		ofDrawBitmapStringHighlight(ofToString(ceilf(vol * 5)), 0, 0);
+		ofPopMatrix();
+	}
 }
 
 //--------------------------------------------------------------
@@ -64,19 +72,19 @@ void ofApp::keyPressed(int key)
     case '2':
       presets.nextPreset();
       break;
-    case '3':
-		ORIENT++;
-		if (ORIENT == 2) {
-			ORIENT = 0;
-		}
-      break;
+    //case '3':
+	//	ORIENT++;
+	//	if (ORIENT == 2) {
+	//		ORIENT = 0;
+	//	}
+    // break;
     case '4':
     case 'l':
       DISPLAY_MASCOTTE = true;
       DISPLAY_INTERACTION = true;
       interactionSound.play();
       interactionSound.setLoop(false);
-      
+	  interactionSound.setVolume(vol);
       break;
     case '5':
     case 'i':
@@ -91,17 +99,24 @@ void ofApp::keyPressed(int key)
       // DISPLAY_CAM = !DISPLAY_CAM;
       DISPLAY_PROJ = !DISPLAY_PROJ;
       break;
-    case '9':
-    case 'm':
-       MUTE = !MUTE;
-       if (MUTE)
-       {
-         sound.setVolume(0);
-       }
-       else
-       {
-         sound.setVolume(3);
-       }
+	case '-':
+		vol-=soundIncr;
+		if (vol <= 0) {
+			vol = 0;
+		}
+		interactionSound.setVolume(vol);
+		sound.setVolume(vol);
+		volStart = ofGetElapsedTimeMillis();
+	break;
+
+	case '+':
+		vol+= soundIncr;
+		if (vol >= 9) {
+			vol = 9;
+		}
+		interactionSound.setVolume(vol);
+		sound.setVolume(vol);
+		volStart = ofGetElapsedTimeMillis();
       break;
    
     case '.':
@@ -113,6 +128,7 @@ void ofApp::keyPressed(int key)
        else
        {
          sound.play();
+		 sound.setLoop(true);
        }
       break;
     default:
@@ -134,20 +150,20 @@ void ofApp::keyReleased(int key)
       // DISPLAY_LOUIS = false;
       DISPLAY_INTERACTION = false;
       break;
-	case '+': {
+	case '3': {
     surfaceGenerator.nextSource();
     std::string iSource = surfaceGenerator.envSources[surfaceGenerator.curSource];
     interactionSound.load("sounds/" + iSource + ".mp3");
     interactionSound.stop();
     break;
     }
-  case '-': {
-    surfaceGenerator.prevSource();
-    std::string oSource = surfaceGenerator.envSources[surfaceGenerator.curSource];
-    interactionSound.load("sounds/"+oSource+".mp3");
-    interactionSound.stop();
-    break;
-  }
+  //case '-': {
+  //  surfaceGenerator.prevSource();
+  //  std::string oSource = surfaceGenerator.envSources[surfaceGenerator.curSource];
+  //  interactionSound.load("sounds/"+oSource+".mp3");
+  //  interactionSound.stop();
+  //  break;
+  //}
   default:
       // std::cout << "wrong command used" << key;
       break;

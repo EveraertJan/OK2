@@ -21,7 +21,7 @@ class Preset
 {
 
 public:
-  void setup(vector<vector<ProjectionMesh>> meshes);
+  void setup(string h, vector<vector<ProjectionMesh>> meshes);
   void update();
   void draw(ofFbo surface, bool DEBUG_MODE, int ORIENT);
   void handleOSC(ofxOscMessage msg);
@@ -33,7 +33,7 @@ public:
   int curMesh = 0;
 
   int curOrient = 0;
-
+  string handle = handle;
 };
 
 #endif /* SurfaceClass_hpp */

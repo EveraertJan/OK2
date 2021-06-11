@@ -23,6 +23,13 @@ void Presets::draw(ofFbo surface, bool DEBUG_MODE, int ORIENT)
   {
     presets[currentPreset].draw(surface, DEBUG_MODE, ORIENT);
   }
+  if (ofGetElapsedTimeMillis() - startTime < 2000) {
+	  ofPushMatrix();
+	  ofTranslate(ofGetWidth() / 2, ofGetHeight() / 2);
+	  ofScale(2);
+	ofDrawBitmapStringHighlight(presets[currentPreset].handle, 0, 0);
+	  ofPopMatrix();
+  }	
 }
 void Presets::saveSettings()
 {
@@ -34,6 +41,7 @@ void Presets::saveSettings()
     settings.addTag("preset");
     settings.pushTag("preset", h);
     Preset p = presets[h];
+	settings.addValue("handle", presets[h].handle);
 
 
 	string orientations[2] = { "wall", "ceiling" };
@@ -95,7 +103,7 @@ void Presets::createNew()
   meshes.push_back(c2);
   Preset p;
   
-  p.setup(meshes);
+  p.setup("STD", meshes);
   presets.push_back(p);
 }
 void Presets::loadSettings()
@@ -112,6 +120,8 @@ void Presets::loadSettings()
       settings.pushTag("preset", i);
       Preset p;
 
+	  string handle = settings.getValue("handle", "STD");
+	  std::cout << handle << endl;
 
 	  vector<vector<ProjectionMesh>> fmeshes;
 
@@ -153,7 +163,7 @@ void Presets::loadSettings()
 
 	  }
 
-		p.setup(fmeshes);
+		p.setup(handle, fmeshes);
 		std::cout << "pushing back preset" << endl;
 		presetsTemp.push_back(p);
 		settings.popTag(); // preset
@@ -218,12 +228,14 @@ void Presets::handleOSC(ofxOscMessage msg)
 
 void Presets::nextPreset()
 {
-  sendMessage("/presets/label", currentPreset);
-  currentPreset++;
-  if (currentPreset >= presets.size())
-  {
-    currentPreset = 0;
-  }
+
+	sendMessage("/presets/label", currentPreset);
+	currentPreset++;
+	if (currentPreset >= presets.size())
+	{
+		currentPreset = 0;
+	}
+	startTime = ofGetElapsedTimeMillis();
 }
 void Presets::prevPreset()
 {
@@ -233,6 +245,7 @@ void Presets::prevPreset()
   {
     currentPreset = presets.size() - 1;
   }
+  startTime = ofGetElapsedTimeMillis();
 }
 
 void Presets::sendMessage(string channel, int value)

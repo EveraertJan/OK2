@@ -13,7 +13,8 @@ SurfaceGenerator::SurfaceGenerator()
   
   envSources.push_back("water");
   envSources.push_back("space");
-  
+  envSources.push_back("whale");
+
   loadNewSource();
   
   
@@ -108,7 +109,7 @@ void SurfaceGenerator::loadNewSource()
   string orientations[2] = { "wall", "ceiling" };
   std::string orientation = orientations[currentOrient];
   std::string pre = envSources[curSource];
-  
+  std::cout << "video/" + pre + "/" + orientation + "/background.mov" << endl;
   backVid.load("video/"+pre+"/"+ orientation +"/background.mov");
   midVid.load("video/"+pre+"/" + orientation + "/mid.mov");
   interactionVid.load("video/" + pre + "/" + orientation + "/interaction.mov");

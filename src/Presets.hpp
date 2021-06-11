@@ -42,6 +42,8 @@ public:
   int currentPreset;
   vector<Preset> presets;
   
+  
+  int startTime = 0;
 };
 
 #endif /* PresetClass_hpp */
