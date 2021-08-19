@@ -27,7 +27,7 @@ void ofApp::setup()
 void ofApp::update()
 {
 	if (DISPLAY_PROJ) {
-		surfaceGenerator.update(DISPLAY_INTERACTION);
+		surfaceGenerator.update(DISPLAY_INTERACTION, DISPLAY_MASCOTTE);
 		presets.update();
 	}
   while (receiver.hasWaitingMessages())
@@ -72,23 +72,21 @@ void ofApp::keyPressed(int key)
     case '2':
       presets.nextPreset();
       break;
-    //case '3':
-	//	ORIENT++;
-	//	if (ORIENT == 2) {
-	//		ORIENT = 0;
-	//	}
-    // break;
+    case '3':
+      // open
+     break;
     case '4':
     case 'l':
-      DISPLAY_MASCOTTE = true;
       DISPLAY_INTERACTION = true;
       interactionSound.play();
       interactionSound.setLoop(false);
-	  interactionSound.setVolume(vol);
+      interactionSound.setVolume(vol);
       break;
     case '5':
     case 'i':
       // DISPLAY_INTERACTION = true;
+      
+      DISPLAY_MASCOTTE = true;
       break;
     case '7':
     case 'v':
@@ -143,7 +141,8 @@ void ofApp::keyReleased(int key)
   {
     case 'i':
     case '5':
-      // DISPLAY_INTERACTION = false;
+      surfaceGenerator.loadNewMascotte();
+      DISPLAY_MASCOTTE = false;
       break;
     case 'l':
     case '4':

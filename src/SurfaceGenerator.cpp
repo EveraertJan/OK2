@@ -13,10 +13,16 @@ SurfaceGenerator::SurfaceGenerator()
   
   envSources.push_back("water");
   envSources.push_back("space");
+  envSources.push_back("jungle");
   envSources.push_back("whale");
+  
+  mascotteSources.push_back("./video/mascot/mascot_w_1.mov");
+  mascotteSources.push_back("./video/mascot/mascot_w_2.mov");
+  mascotteSources.push_back("./video/mascot/mascot_w_3.mov");
+  mascotteSources.push_back("./video/mascot/mascot_w_4.mov");
+  
 
   loadNewSource();
-  
   
   wall_FBO.allocate(WIDTH, HEIGHT, GL_RGBA);
   ceiling_FBO.allocate(WIDTH, HEIGHT, GL_RGBA);
@@ -35,7 +41,7 @@ void SurfaceGenerator::handleOSC(ofxOscMessage msg)
   string a = msg.getAddress();
 }
 
-void SurfaceGenerator::update(bool INTERACTION)
+void SurfaceGenerator::update(bool INTERACTION, bool MASCOTTE)
 {
   if(backVid.isLoaded()) {
     backVid.update();
@@ -47,6 +53,9 @@ void SurfaceGenerator::update(bool INTERACTION)
     interactionVid.update();
   }
   
+  if( mascotteVid.isLoaded()) {
+    mascotteVid.update();
+  }
   
   if(INTERACTION && !interactionVid.isPlaying()) {
     interactionVid.play();
@@ -54,21 +63,21 @@ void SurfaceGenerator::update(bool INTERACTION)
 }
 void SurfaceGenerator::generate( bool DEBUG_MODE, int ORIENT)
 {
-	if (ORIENT != currentOrient) {
-		currentOrient = ORIENT;
-	//	std::cout << ORIENT << endl;
-		loadNewSource();
-	}
+//	if (ORIENT != currentOrient) {
+//		currentOrient = ORIENT;
+//	//	std::cout << ORIENT << endl;
+//		loadNewSource();
+//	}
   // // prep walls
   wall_FBO.begin();
   ofEnableAlphaBlending();
   ofClear(0, 0, 0, 0);
 
   ofSetColor(255, 255, 255, 255);
+  if(backVid.isLoaded()) {
+    backVid.draw(0, 0, WIDTH, HEIGHT);
+  }
   if(curSource == 0) {
-    if(backVid.isLoaded()) {
-      backVid.draw(0, 0, WIDTH, HEIGHT);
-    }
     if( interactionVid.isLoaded()) {
       interactionVid.draw(0, 0, WIDTH, HEIGHT);
     }
@@ -76,16 +85,16 @@ void SurfaceGenerator::generate( bool DEBUG_MODE, int ORIENT)
       midVid.draw(0, 0, WIDTH, HEIGHT);
     }
   } else {
-    if(backVid.isLoaded()) {
-      backVid.draw(0, 0, WIDTH, HEIGHT);
-    }
     if( midVid.isLoaded()) {
       midVid.draw(0, 0, WIDTH, HEIGHT);
     }
     if( interactionVid.isLoaded()) {
       interactionVid.draw(0, 0, WIDTH, HEIGHT);
     }
-    
+  }
+  
+  if( mascotteVid.isLoaded()) {
+    mascotteVid.draw(0, 0, WIDTH, HEIGHT);
   }
   
   ofDisableAlphaBlending();
@@ -95,7 +104,17 @@ void SurfaceGenerator::generate( bool DEBUG_MODE, int ORIENT)
 void SurfaceGenerator::draw(int drawWidth, int drawHeight, int position, int subX, int subY, int subWidth, int subHeight, bool INTERACTION, bool LOUIS)
 {
 }
+void SurfaceGenerator::loadNewMascotte() {
+  if(!mascotteVid.isPlaying()) {
+    mascotteVid.close();
+    currentMascotte = round(ofRandom(0, mascotteSources.size()-1 ));
+    std::cout << "playing mascotte " << currentMascotte << " - " << mascotteSources[currentMascotte]  << endl;
+    mascotteVid.load(mascotteSources[currentMascotte]);
+    mascotteVid.setLoopState(OF_LOOP_NONE);
+    mascotteVid.play();
+  }
 
+}
 void SurfaceGenerator::loadNewSource()
 {
   backVid.stop();
@@ -106,13 +125,11 @@ void SurfaceGenerator::loadNewSource()
   midVid.close();
   interactionVid.close();
   
-  string orientations[2] = { "wall", "ceiling" };
-  std::string orientation = orientations[currentOrient];
   std::string pre = envSources[curSource];
-  std::cout << "video/" + pre + "/" + orientation + "/background.mov" << endl;
-  backVid.load("video/"+pre+"/"+ orientation +"/background.mov");
-  midVid.load("video/"+pre+"/" + orientation + "/mid.mov");
-  interactionVid.load("video/" + pre + "/" + orientation + "/interaction.mov");
+  std::cout << "video/" + pre + "/background.mov" << endl;
+  backVid.load("video/" + pre + "/background.mov");
+  midVid.load("video/"+pre + "/mid.mov");
+  interactionVid.load("video/" + pre + "/interaction.mov");
   
   
   backVid.play();

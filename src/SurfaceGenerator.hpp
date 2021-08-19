@@ -21,10 +21,11 @@ class SurfaceGenerator
   
 public:
   SurfaceGenerator();
-  void update(bool INTERACTION);
+  void update(bool INTERACTION, bool MASCOTTE);
   void generate(bool DEBUG_MODE, int ORIENT);
   void draw(int drawWidth, int drawHeight, int position, int subX, int subY, int subWidth, int subHeight, bool INTERACTION, bool LOUIS);
   void loadNewSource();
+  void loadNewMascotte();
   void handleOSC(ofxOscMessage msg);
   
   void nextSource();
@@ -39,13 +40,16 @@ public:
   int WIDTH = _width;
   
   vector<std::string> envSources;
+  vector<std::string> mascotteSources;
+  
   int curSource = 0;
+  int currentMascotte = 0;
   
   ofxHapPlayer backVid;
   ofxHapPlayer interactionVid;
   ofxHapPlayer midVid;
-
-  int currentOrient = 0;
+  ofxHapPlayer mascotteVid;
+  
   
 };
 
