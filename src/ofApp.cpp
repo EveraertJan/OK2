@@ -104,6 +104,7 @@ void ofApp::keyPressed(int key)
 		}
 		interactionSound.setVolume(vol);
 		sound.setVolume(vol);
+    overlaySound.setVolume(vol);
 		volStart = ofGetElapsedTimeMillis();
 	break;
 
@@ -114,6 +115,7 @@ void ofApp::keyPressed(int key)
 		}
 		interactionSound.setVolume(vol);
 		sound.setVolume(vol);
+    overlaySound.setVolume(vol);
 		volStart = ofGetElapsedTimeMillis();
       break;
    
@@ -153,6 +155,11 @@ void ofApp::keyReleased(int key)
     surfaceGenerator.nextSource();
     std::string iSource = surfaceGenerator.envSources[surfaceGenerator.curSource];
     interactionSound.load("sounds/" + iSource + ".mp3");
+    if(iSource == "jungle") {
+      overlaySound.load("video/"+iSource + "/music.mp3");
+      overlaySound.setLoop(true);
+      overlaySound.play();
+    }
     interactionSound.stop();
     break;
     }

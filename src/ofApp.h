@@ -33,6 +33,7 @@ public:
   
   ofSoundPlayer sound;
   ofSoundPlayer interactionSound;
+  ofSoundPlayer overlaySound;
   
   Presets presets;
 
