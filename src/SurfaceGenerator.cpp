@@ -19,7 +19,7 @@ SurfaceGenerator::SurfaceGenerator()
   mascotteSources.push_back("./video/mascot/mascot_w_1.mov");
   mascotteSources.push_back("./video/mascot/mascot_w_2.mov");
   mascotteSources.push_back("./video/mascot/mascot_w_3.mov");
-//  mascotteSources.push_back("./video/mascot/mascot_w_4.mov");
+  mascotteSources.push_back("./video/mascot/mascot_w_4.mov");
   
 
   loadNewSource();
